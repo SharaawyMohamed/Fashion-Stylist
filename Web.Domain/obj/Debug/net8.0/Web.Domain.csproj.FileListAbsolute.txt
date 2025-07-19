@@ -1,0 +1,15 @@
+F:\GitHubRepositories\Pet-care\Web.Domain\bin\Debug\net8.0\Web.Domain.deps.json
+F:\GitHubRepositories\Pet-care\Web.Domain\bin\Debug\net8.0\Web.Domain.runtimeconfig.json
+F:\GitHubRepositories\Pet-care\Web.Domain\bin\Debug\net8.0\Web.Domain.dll
+F:\GitHubRepositories\Pet-care\Web.Domain\bin\Debug\net8.0\Web.Domain.pdb
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.csproj.AssemblyReference.cache
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.AssemblyInfoInputs.cache
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.AssemblyInfo.cs
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.csproj.CoreCompileInputs.cache
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.sourcelink.json
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.dll
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\refint\Web.Domain.dll
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.pdb
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\Web.Domain.genruntimeconfig.cache
+F:\GitHubRepositories\Pet-care\Web.Domain\obj\Debug\net8.0\ref\Web.Domain.dll

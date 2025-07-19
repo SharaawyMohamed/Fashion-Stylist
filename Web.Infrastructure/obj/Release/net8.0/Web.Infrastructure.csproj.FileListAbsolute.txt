@@ -1,0 +1,16 @@
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.deps.json
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.dll
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.pdb
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\bin\Release\net8.0\Web.Domain.dll
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\bin\Release\net8.0\Web.Domain.pdb
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.csproj.AssemblyReference.cache
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.AssemblyInfoInputs.cache
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.AssemblyInfo.cs
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.csproj.CoreCompileInputs.cache
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.sourcelink.json
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infr.59F9D258.Up2Date
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.dll
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\refint\Web.Infrastructure.dll
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.pdb
+F:\GitHubRepositories\Pet-care\Web.Infrastructure\obj\Release\net8.0\ref\Web.Infrastructure.dll
