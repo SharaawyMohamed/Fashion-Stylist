@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2tLCubGwhVUoVvqJeTqmXBKYqBPx7+8N9twRPPvoGWs=",
+  "Hash": "Y5yOiZ+ZWxWXmU1udIT+oZzVzGvvjuwTvgQehQuCX+k=",
   "Source": "Web.APIs",
   "BasePath": "_content/Web.APIs",
   "Mode": "Default",
@@ -10,425 +10,87 @@
     {
       "Name": "Web.APIs\\wwwroot",
       "Source": "Web.APIs",
-      "ContentRoot": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\",
+      "ContentRoot": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
       "BasePath": "_content/Web.APIs",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
+      "Identity": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\",
+      "ContentRoot": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
       "BasePath": "_content/Web.APIs",
-      "RelativePath": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601#[.{fingerprint}]?.jpg",
+      "RelativePath": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lil5cfug57",
-      "Integrity": "0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\images\\61d79a39-e1bb-45b6-beea-3ae97de24601.jpg"
     },
     {
-      "Identity": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
+      "Identity": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\",
+      "ContentRoot": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
       "BasePath": "_content/Web.APIs",
-      "RelativePath": "files/images/7742ec29-4182-4b05-986b-95fc6a08c176#[.{fingerprint}]?.jpg",
+      "RelativePath": "files/images/7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9mpt1bi8qh",
-      "Integrity": "Dww9M9Fj5q+1bvHDknTjGPU7UBZhlgAeXMcIVhyJMDs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg"
     },
     {
-      "Identity": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
+      "Identity": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\",
+      "ContentRoot": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
       "BasePath": "_content/Web.APIs",
-      "RelativePath": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46#[.{fingerprint}]?.jpg",
+      "RelativePath": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lil5cfug57",
-      "Integrity": "0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg"
     },
     {
-      "Identity": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
+      "Identity": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\",
+      "ContentRoot": "F:\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
       "BasePath": "_content/Web.APIs",
-      "RelativePath": "files/images/e6085609-8634-4e43-bd41-db6c53546433#[.{fingerprint}]?.jpg",
+      "RelativePath": "files/images/e6085609-8634-4e43-bd41-db6c53546433.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lil5cfug57",
-      "Integrity": "0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 16:00:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601.lil5cfug57.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 16:00:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lil5cfug57"
-        },
-        {
-          "Name": "label",
-          "Value": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/7742ec29-4182-4b05-986b-95fc6a08c176.9mpt1bi8qh.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "836595"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Dww9M9Fj5q+1bvHDknTjGPU7UBZhlgAeXMcIVhyJMDs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 08:48:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9mpt1bi8qh"
-        },
-        {
-          "Name": "label",
-          "Value": "files/images/7742ec29-4182-4b05-986b-95fc6a08c176.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Dww9M9Fj5q+1bvHDknTjGPU7UBZhlgAeXMcIVhyJMDs="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "836595"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Dww9M9Fj5q+1bvHDknTjGPU7UBZhlgAeXMcIVhyJMDs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 08:48:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Dww9M9Fj5q+1bvHDknTjGPU7UBZhlgAeXMcIVhyJMDs="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:48:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46.lil5cfug57.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:48:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lil5cfug57"
-        },
-        {
-          "Name": "label",
-          "Value": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/e6085609-8634-4e43-bd41-db6c53546433.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:50:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/images/e6085609-8634-4e43-bd41-db6c53546433.lil5cfug57.jpg",
-      "AssetFile": "F:\\GitHubRepositories\\Pet-care\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83040"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:50:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lil5cfug57"
-        },
-        {
-          "Name": "label",
-          "Value": "files/images/e6085609-8634-4e43-bd41-db6c53546433.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
-        }
-      ]
     }
   ]
 }

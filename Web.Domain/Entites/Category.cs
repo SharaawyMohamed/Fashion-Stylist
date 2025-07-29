@@ -9,7 +9,7 @@ namespace Web.Domain.Entites
 	public class Category:BaseEntity<int>
 	{
 		public string Name { get; set; }
-		public string PictureUrl { get; set; }
+		public string ? PictureUrl { get; set; }
 		public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 	}
 }

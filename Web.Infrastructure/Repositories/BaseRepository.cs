@@ -26,5 +26,7 @@ namespace Web.Infrastructure.Repositories
 		private readonly DbSet<TEntity> _entities;
 		public async Task<IEnumerable<TEntity>> GetAllAsync()
 		=> await _entities.ToListAsync();
-	}
+
+		public async Task<TEntity> FindByIdAsync(TKey id) => await _entities.FindAsync(id);
+    }
 }

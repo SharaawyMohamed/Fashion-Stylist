@@ -1,25 +1,18 @@
 ﻿
 using FluentValidation;
-using Mapster;
 using MediatR.NotificationPublishers;
 using Microsoft.Extensions.DependencyInjection;
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+using Mapster;
 using System.Reflection;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 using Web.APIs.Validators;
 using Web.Application.Mapping;
 using Web.Application.Service;
-using Web.Domain.DTOs.AccountDTO;
 using Web.Domain.Interfaces;
 using Web.Domain.Repositories;
 using Web.Infrastructure.Repositories;
 using Web.Infrastructure.Service;
+using MapsterMapper;
+
 
 namespace Web.Application
 {
@@ -27,8 +20,13 @@ namespace Web.Application
 	{
 		public static IServiceCollection AddApplication(this IServiceCollection services)
 		{
-			services.AddMapster();
-			services.AddAutoMapper(typeof(MappingProfile).Assembly);
+            var config = TypeAdapterConfig.GlobalSettings;
+            config.Scan(typeof(MappingProfile).Assembly);
+
+            services.AddSingleton(config);
+            services.AddScoped<IMapper, ServiceMapper>();
+
+            services.AddAutoMapper(typeof(MappingProfile).Assembly);
 			services.AddValidatorsFromAssemblyContaining<RegisterDTOValidator>();
 
 			services.AddMediatR(cfg =>

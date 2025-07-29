@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Web.Application.Features.Products.Queries
 {
-	public class GetProductByIdQueryDto(string id,)
+	public record GetProductByIdQueryDto(string id);
 	
 }

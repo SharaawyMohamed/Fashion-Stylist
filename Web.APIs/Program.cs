@@ -47,7 +47,17 @@ namespace Web.APIs
 			{
 				app.UseSwagger();
 				app.UseSwaggerUI();
-			}
+
+                app.Use(async (ctx, next) =>
+                {
+                    if (ctx.Request.Path == "/")
+                    {
+                        ctx.Response.Redirect("/swagger/index.html");
+                        return;
+                    }
+                    await next();
+                });
+            }
 
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();

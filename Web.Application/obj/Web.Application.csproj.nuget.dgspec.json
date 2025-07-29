@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\GitHubRepositories\\Pet-care\\Web.Application\\Web.Application.csproj": {}
+    "F:\\Fashion-Stylist\\Web.Application\\Web.Application.csproj": {}
   },
   "projects": {
-    "F:\\GitHubRepositories\\Pet-care\\Web.Application\\Web.Application.csproj": {
+    "F:\\Fashion-Stylist\\Web.Application\\Web.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\GitHubRepositories\\Pet-care\\Web.Application\\Web.Application.csproj",
+        "projectUniqueName": "F:\\Fashion-Stylist\\Web.Application\\Web.Application.csproj",
         "projectName": "Web.Application",
-        "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Application\\Web.Application.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "F:\\GitHubRepositories\\Pet-care\\Web.Application\\obj\\",
+        "projectPath": "F:\\Fashion-Stylist\\Web.Application\\Web.Application.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "F:\\Fashion-Stylist\\Web.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj": {
-                "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj"
+              "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj": {
+                "projectPath": "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj"
               },
-              "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\Web.Infrastructure.csproj": {
-                "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\Web.Infrastructure.csproj"
+              "F:\\Fashion-Stylist\\Web.Infrastructure\\Web.Infrastructure.csproj": {
+                "projectPath": "F:\\Fashion-Stylist\\Web.Infrastructure\\Web.Infrastructure.csproj"
               }
             }
           }
@@ -50,8 +46,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -102,25 +97,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj": {
+    "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj",
+        "projectUniqueName": "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
         "projectName": "Web.Domain",
-        "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\obj\\",
+        "projectPath": "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "F:\\Fashion-Stylist\\Web.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -145,8 +136,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -191,25 +181,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\Web.Infrastructure.csproj": {
+    "F:\\Fashion-Stylist\\Web.Infrastructure\\Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\Web.Infrastructure.csproj",
+        "projectUniqueName": "F:\\Fashion-Stylist\\Web.Infrastructure\\Web.Infrastructure.csproj",
         "projectName": "Web.Infrastructure",
-        "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\Web.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "F:\\GitHubRepositories\\Pet-care\\Web.Infrastructure\\obj\\",
+        "projectPath": "F:\\Fashion-Stylist\\Web.Infrastructure\\Web.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "F:\\Fashion-Stylist\\Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -223,8 +209,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj": {
-                "projectPath": "F:\\GitHubRepositories\\Pet-care\\Web.Domain\\Web.Domain.csproj"
+              "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj": {
+                "projectPath": "F:\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj"
               }
             }
           }
@@ -238,8 +224,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -278,7 +263,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

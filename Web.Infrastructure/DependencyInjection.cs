@@ -17,7 +17,7 @@ namespace Web.Infrastructure
 			services.AddDbContext<AppDbContext>(options =>
 			{
 				options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-				options.UsePro
+				
 			});
 
 			services.AddIdentity<AppUser, IdentityRole>()

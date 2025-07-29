@@ -21,7 +21,6 @@ namespace Web.Infrastructure.Configurations
 				.HasMaxLength(100);  
 
 			builder.Property(c => c.PictureUrl)
-				.IsRequired()
 				.HasMaxLength(500);
 
 			builder.HasMany(c => c.Products)

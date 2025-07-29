@@ -14,7 +14,6 @@ namespace Web.Domain.Entites
 		public string description { get; set; }
 		public decimal price { get; set; }
 		public string pictureUrl { get; set; }
-
 		public virtual ICollection<Item> items { get; set; } = new List<Item>();
 	}
 	

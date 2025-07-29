@@ -9,6 +9,7 @@ namespace Web.Domain.Repositories
 {
 	public interface IBaseRepository<TKey, TEntity> where TEntity : BaseEntity<TKey>
 	{
+		Task<TEntity> FindByIdAsync(TKey id);
 		Task<IEnumerable<TEntity>> GetAllAsync();
 
 	}

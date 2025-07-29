@@ -245,7 +245,6 @@ namespace Web.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PictureUrl")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -300,6 +299,9 @@ namespace Web.Infrastructure.Migrations
                     b.Property<Guid>("CollectionId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("description")
                         .IsRequired()
                         .HasMaxLength(2000)
@@ -330,6 +332,9 @@ namespace Web.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("ProductType")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("basePrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -346,6 +351,9 @@ namespace Web.Infrastructure.Migrations
 
                     b.Property<decimal>("discountedPrice")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("isOffred")
+                        .HasColumnType("bit");
 
                     b.Property<string>("pictureUrl")
                         .IsRequired()
