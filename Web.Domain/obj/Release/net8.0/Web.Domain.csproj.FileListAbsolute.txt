@@ -28,3 +28,18 @@ F:\Fashion-Stylist\Web.Domain\obj\Release\net8.0\refint\Web.Domain.dll
 F:\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.pdb
 F:\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.genruntimeconfig.cache
 F:\Fashion-Stylist\Web.Domain\obj\Release\net8.0\ref\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\bin\Release\net8.0\Web.Domain.deps.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\bin\Release\net8.0\Web.Domain.runtimeconfig.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\bin\Release\net8.0\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\bin\Release\net8.0\Web.Domain.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.csproj.AssemblyReference.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.AssemblyInfoInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.AssemblyInfo.cs
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.csproj.CoreCompileInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.sourcelink.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\refint\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\Web.Domain.genruntimeconfig.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Release\net8.0\ref\Web.Domain.dll

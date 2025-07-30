@@ -20,11 +20,26 @@ namespace Web.Infrastructure.Data
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
-
-		protected override void OnModelCreating(ModelBuilder builder)
+        public virtual DbSet<Favorite> Favorites { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
 		{
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-			base.OnModelCreating(builder);  
-		}
+			base.OnModelCreating(builder);
+
+            builder.Entity<Favorite>()
+.HasKey(f => new { f.UserId, f.ProductId });
+            ////////////////
+            builder.Entity<Favorite>()
+          .HasOne(f => f.User)
+          .WithMany(f => f.Favorites)
+          .HasForeignKey(f => f.UserId)
+           .OnDelete(DeleteBehavior.Restrict);
+            //////////////
+            builder.Entity<Favorite>()
+                .HasOne(f => f.Product)
+                .WithMany()
+                .HasForeignKey(f => f.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
 	}
 }

@@ -30,3 +30,19 @@ F:\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.dll
 F:\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\refint\Web.Infrastructure.dll
 F:\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.pdb
 F:\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\ref\Web.Infrastructure.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.deps.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\bin\Release\net8.0\Web.Infrastructure.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\bin\Release\net8.0\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\bin\Release\net8.0\Web.Domain.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.csproj.AssemblyReference.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.AssemblyInfoInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.AssemblyInfo.cs
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.csproj.CoreCompileInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.sourcelink.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infr.59F9D258.Up2Date
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\refint\Web.Infrastructure.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\Web.Infrastructure.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Infrastructure\obj\Release\net8.0\ref\Web.Infrastructure.dll

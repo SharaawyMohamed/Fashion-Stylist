@@ -31,7 +31,16 @@ namespace Web.Domain.Response
 				errors = error
 			};
 		}
-		public static async Task<BaseResponse> ValidationError(List<string> errors, string message = "Validation Error", HttpStatusCode statusCode = HttpStatusCode.BadRequest)
+        public static async Task<BaseResponse> Faild(string message = "Failed", HttpStatusCode statusCode = HttpStatusCode.BadRequest)
+        {
+            return new BaseResponse
+            {
+                StatusCode = statusCode,
+                Message = message,
+               
+            };
+        }
+        public static async Task<BaseResponse> ValidationError(List<string> errors, string message = "Validation Error", HttpStatusCode statusCode = HttpStatusCode.BadRequest)
 		{
 			return new BaseResponse
 			{

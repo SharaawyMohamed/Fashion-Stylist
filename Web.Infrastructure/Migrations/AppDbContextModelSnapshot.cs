@@ -290,6 +290,21 @@ namespace Web.Infrastructure.Migrations
                     b.ToTable("collections");
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.Favorite", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("Web.Domain.Entites.Item", b =>
                 {
                     b.Property<Guid>("id")
@@ -466,6 +481,25 @@ namespace Web.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.Favorite", b =>
+                {
+                    b.HasOne("Web.Domain.Entites.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Domain.Entites.AppUser", "User")
+                        .WithMany("Favorites")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Web.Domain.Entites.Item", b =>
                 {
                     b.HasOne("Web.Domain.Entites.Collection", "collection")
@@ -505,6 +539,11 @@ namespace Web.Infrastructure.Migrations
                     b.Navigation("appUser");
 
                     b.Navigation("product");
+                });
+
+            modelBuilder.Entity("Web.Domain.Entites.AppUser", b =>
+                {
+                    b.Navigation("Favorites");
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Category", b =>

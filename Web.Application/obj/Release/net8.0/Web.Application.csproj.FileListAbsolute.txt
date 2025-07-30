@@ -34,3 +34,21 @@ F:\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.dll
 F:\Fashion-Stylist\Web.Application\obj\Release\net8.0\refint\Web.Application.dll
 F:\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.pdb
 F:\Fashion-Stylist\Web.Application\obj\Release\net8.0\ref\Web.Application.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Application.deps.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Application.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Application.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Domain.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Infrastructure.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Domain.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\bin\Release\net8.0\Web.Infrastructure.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.csproj.AssemblyReference.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.AssemblyInfoInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.AssemblyInfo.cs
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.csproj.CoreCompileInputs.cache
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.sourcelink.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Appl.6218106C.Up2Date
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\refint\Web.Application.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\Web.Application.pdb
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Release\net8.0\ref\Web.Application.dll
