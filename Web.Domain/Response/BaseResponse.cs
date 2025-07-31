@@ -14,7 +14,8 @@ namespace Web.Domain.Response
 		public string Message { get; set; }
 		public object Data { get; set; }
 		public List<string> errors { get; set; } = new List<string>();
-		public static async Task<BaseResponse> Success(object data = null, string message = "Success")
+        public int? TotalCount { get; set; }
+        public static async Task<BaseResponse> Success(object data = null, string message = "Success")
 		{
 			return new BaseResponse
 			{
@@ -22,7 +23,16 @@ namespace Web.Domain.Response
 				Data = data
 			};
 		}
-		public static async Task<BaseResponse> Fail(List<string> error = null, string message = "Failed", HttpStatusCode statusCode = HttpStatusCode.BadRequest)
+        public static async Task<BaseResponse> New(object data = null, string message = "Success",int totalCount=0)
+        {
+            return new BaseResponse
+            {
+                Message = message,
+                Data = data,
+				TotalCount= totalCount
+            };
+        }
+        public static async Task<BaseResponse> Fail(List<string> error = null, string message = "Failed", HttpStatusCode statusCode = HttpStatusCode.BadRequest)
 		{
 			return new BaseResponse
 			{

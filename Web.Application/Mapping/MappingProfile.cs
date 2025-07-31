@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Web.Application.Features.User.Queries.GetUser;
+using Web.Domain.DTOs.FavoritDTO;
 using Web.Domain.DTOs.ProductDTO;
 using Web.Domain.DTOs.UserDTO;
 using Web.Domain.Entites;
@@ -51,6 +52,13 @@ namespace Web.Application.Mapping
               .Map(dest => dest.Reviews, src => src.reviews);
 
             config.NewConfig<AppUser, GetUserQueryDto>();
-		}
+
+            config.NewConfig<Product, FavoriteDto>()
+                 .Map(dest => dest.Id, src => src.id)
+              .Map(dest => dest.title, src => src.title)
+              .Map(dest => dest.pictureUrl, src => src.pictureUrl)
+              .Map(dest => dest.basePrice, src => src.basePrice);
+
+        }
 	}
 }
