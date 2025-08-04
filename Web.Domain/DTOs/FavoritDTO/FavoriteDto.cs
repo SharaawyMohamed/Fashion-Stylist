@@ -12,5 +12,7 @@ namespace Web.Domain.DTOs.FavoritDTO
         public string title { get; set; }
         public string pictureUrl { get; set; }
         public decimal basePrice { get; set; }
+        public string colors { get; set; }
+        public string sizes { get; set; }
     }
 }

@@ -46,6 +46,7 @@ namespace Web.APIs.Controllers
         }
 
         [HttpPost("AddReview")]
+        [Authorize]
         public async Task<IActionResult> AddReview(ReviewReqDto review)
         {
             Review rev = new Review()
@@ -61,7 +62,7 @@ namespace Web.APIs.Controllers
             {
                 return BadRequest("Can't save Review");
             }
-            return Ok("Review added");
+            return Ok(rev);
         }
 
     }

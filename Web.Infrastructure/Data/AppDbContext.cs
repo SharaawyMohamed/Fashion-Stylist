@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using Web.Domain.Entites;
@@ -21,10 +22,20 @@ namespace Web.Infrastructure.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Favorite> Favorites { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<CartItem> CartItems { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
 		{
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 			base.OnModelCreating(builder);
+
+            builder.Entity<Cart>()
+              .HasMany(c => c.Items)
+              .WithOne(ci => ci.Cart)
+              .HasForeignKey(ci => ci.CartId);
+
+            builder.Entity<CartItem>()
+               .HasKey(ci => new { ci.CartId, ci.ProductId });
 
             builder.Entity<Favorite>()
 .HasKey(f => new { f.UserId, f.ProductId });

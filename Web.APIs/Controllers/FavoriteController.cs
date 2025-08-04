@@ -62,8 +62,6 @@ namespace Web.APIs.Controllers
             var UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;         
 
             var favorits = await _dbContext.Favorites.Where(f => f.UserId == UserId).ToListAsync();
-            if (favorits == null || !favorits.Any())           
-                return Ok("You Don't have product in Your favorite");
             
             var response = new List<FavoriteDto>();
             foreach (var i in favorits)
@@ -76,7 +74,9 @@ namespace Web.APIs.Controllers
                         Id = i.ProductId,
                         title = product.title,
                         basePrice = product.basePrice,
-                        pictureUrl = product.pictureUrl
+                        pictureUrl = product.pictureUrl,
+                        colors=product.colors,
+                        sizes=product.sizes
                     };
                     response.Add(dto);
                 }
