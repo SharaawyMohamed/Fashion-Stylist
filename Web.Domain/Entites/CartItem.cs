@@ -20,6 +20,7 @@ namespace Web.Domain.Entites
 
         public int Quantity { get; set; }
         public string sizes { get; set; }
+        public string Color { get; set; }
         public decimal TotalPriceForProduct => CalculateTotal();
 
         private decimal CalculateTotal()

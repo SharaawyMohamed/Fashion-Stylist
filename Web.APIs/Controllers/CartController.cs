@@ -40,8 +40,9 @@ namespace Web.APIs.Controllers
                     ProductTitle = item.Product.title,
                     Quantity = item.Quantity,
                     Price = item.Product.basePrice,
-                   Color=item.Product.colors,
-                   Size=item.Product.sizes,
+                   Color=item.Color,
+                   Size=item.sizes,
+                   
                     Image = item.Product.pictureUrl,
                     TotalPriceForProduct = item.TotalPriceForProduct
                 }).ToList(),
@@ -77,7 +78,9 @@ namespace Web.APIs.Controllers
                     ProductId = sendCartItemDTO.ProductId,
                     Quantity = sendCartItemDTO.Quantity,
                     CartId = cart.id,
-                    sizes = sendCartItemDTO.Size
+                    sizes = sendCartItemDTO.Size,
+                    Color=sendCartItemDTO.Color
+                    
                 };
                 await _context.CartItems.AddAsync(cartItem);
             }
