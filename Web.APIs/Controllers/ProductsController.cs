@@ -54,15 +54,35 @@ namespace Web.APIs.Controllers
                 comment = review.Comment,
                 rate = review.rate,
                 productId = review.ProductId,
+               
                 userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value
             };
             _context.Reviews.Add(rev);
+         
             int res = _context.SaveChanges();
             if(res == 0)
             {
                 return BadRequest("Can't save Review");
             }
-            return Ok(rev);
+            var dto = await _context.Reviews
+         .Include(u => u.appUser)
+         .FirstOrDefaultAsync(p => p.id == rev.id);
+
+            var response = new ReviewDto
+            {
+                Id = dto.id,
+                Comment = dto.comment,
+                Rate = dto.rate,
+                User = new UserDTO
+                {
+                    Id = dto.appUser.Id,
+                    UserName = dto.appUser.UserName,
+                    ProfilePicture = dto.appUser.ProfilePicture,
+                    Email = dto.appUser.Email,
+                    
+                }
+            };
+            return Ok(response);
         }
 
     }

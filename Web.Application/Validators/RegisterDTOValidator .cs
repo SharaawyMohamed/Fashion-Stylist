@@ -31,16 +31,11 @@ namespace Web.APIs.Validators
 				.Matches("[^a-zA-Z0-9]");
 
 			RuleFor(x => x.ProfilePicture)
-				.Must(BeAValidImage).When(x => x.ProfilePicture != null)
+				//.Must(BeAValidImage).When(x => x.ProfilePicture != null)
 				.Must(BeUnderMaxSize).When(x => x.ProfilePicture != null);
 		}
 
-		private bool BeAValidImage(IFormFile file)
-		{
-			var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-			var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
-			return allowedExtensions.Contains(extension);
-		}
+		
 
 		private bool BeUnderMaxSize(IFormFile file)
 		{

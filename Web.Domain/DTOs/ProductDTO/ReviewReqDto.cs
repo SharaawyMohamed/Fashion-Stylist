@@ -9,7 +9,7 @@ namespace Web.Domain.DTOs.ProductDTO
     public class ReviewReqDto
     {
         public string Comment { set; get; }
-        public int rate { set; get; }
+        public double rate { set; get; }
         public Guid ProductId { set; get; }
     }
 }

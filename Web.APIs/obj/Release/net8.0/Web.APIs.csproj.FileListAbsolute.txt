@@ -503,3 +503,13 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\refin
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\Web.APIs.pdb
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\Web.APIs.genruntimeconfig.cache
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\ref\Web.APIs.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\FirebaseAdmin.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Api.Gax.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Api.Gax.Rest.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Apis.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Apis.Auth.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Apis.Core.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Newtonsoft.Json.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\System.Management.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Management.dll

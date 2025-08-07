@@ -11,6 +11,9 @@ using Web.Infrastructure;
 using Web.Infrastructure.Data;
 using Web.Infrastructure.Service;
 using Web.Domain.DTOs.AccountDTO;
+using Microsoft.AspNetCore.Builder.Extensions;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace Web.APIs
 {
@@ -31,9 +34,12 @@ namespace Web.APIs
 			builder.Services.AddInfrastructure(builder.Configuration)
 				.AddJWTConfigurations(builder.Configuration)
 				.AddApplication();
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json")),
+            });
 
-
-			var app = builder.Build();
+            var app = builder.Build();
 			if (app.Environment.IsDevelopment())
 			{
 				using (var scope = app.Services.CreateScope())

@@ -10,8 +10,8 @@ namespace Web.Domain.Entites
 	public class Review:BaseEntity<Guid>
 	{
 		public string comment { get; set; }
-		public int rate { get; set; }
-
+		public double rate { get; set; }
+		public DateOnly CreatedAt {  get; set; } = DateOnly.FromDateTime(DateTime.Now); 
 		public string userId { get; set; }
 		public virtual AppUser appUser { get; set; }
 

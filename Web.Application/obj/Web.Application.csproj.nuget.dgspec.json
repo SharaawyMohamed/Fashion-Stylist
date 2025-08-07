@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.0.0, )"
@@ -150,6 +154,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.17, )"
