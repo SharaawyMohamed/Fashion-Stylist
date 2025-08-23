@@ -301,6 +301,73 @@ namespace Web.Infrastructure.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.Chat", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FirstUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SecondUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("FirstUserId", "SecondUserId")
+                        .IsUnique();
+
+                    b.ToTable("Chats");
+                });
+
+            modelBuilder.Entity("Web.Domain.Entites.ChatMessage", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ReceiverUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SenderUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("ReceiverUserId", "SenderUserId", "CreatedAt");
+
+                    b.HasIndex("SenderUserId", "ReceiverUserId", "CreatedAt");
+
+                    b.ToTable("ChatMessages");
+                });
+
             modelBuilder.Entity("Web.Domain.Entites.Collection", b =>
                 {
                     b.Property<Guid>("id")
@@ -559,6 +626,17 @@ namespace Web.Infrastructure.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.ChatMessage", b =>
+                {
+                    b.HasOne("Web.Domain.Entites.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+                });
+
             modelBuilder.Entity("Web.Domain.Entites.Favorite", b =>
                 {
                     b.HasOne("Web.Domain.Entites.Product", "Product")
@@ -632,6 +710,11 @@ namespace Web.Infrastructure.Migrations
             modelBuilder.Entity("Web.Domain.Entites.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Web.Domain.Entites.Chat", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Collection", b =>

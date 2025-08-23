@@ -513,3 +513,7 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Googl
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Newtonsoft.Json.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\System.Management.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Microsoft.Extensions.ObjectPool.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

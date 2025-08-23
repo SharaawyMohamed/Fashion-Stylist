@@ -73,10 +73,11 @@ namespace Web.APIs.Controllers
                 Id = dto.id,
                 Comment = dto.comment,
                 Rate = dto.rate,
+                Date=dto.CreatedAt,
                 User = new UserDTO
                 {
                     Id = dto.appUser.Id,
-                    UserName = dto.appUser.UserName,
+                    UserName = dto.appUser.FullName,
                     ProfilePicture = dto.appUser.ProfilePicture,
                     Email = dto.appUser.Email,
                     

@@ -131,8 +131,13 @@ namespace Web.Infrastructure.Service
 
 			user.FCM_Token=loginDto.FCM_Token;
 		    await _userManager.UpdateAsync(user);
+			var obj = new LoginResDto
+            {
+				UserId=user.Id,
+				Token = await _authService.CreateTokenAsync(user, _userManager)
+            };
 
-			return await BaseResponse.Success(await _authService.CreateTokenAsync(user, _userManager));
+			return await BaseResponse.Success(obj);
 		}
 
 		public async Task<BaseResponse> ForgotPasswordAsync(ForgetPasswordDto request)

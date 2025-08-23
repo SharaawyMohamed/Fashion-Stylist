@@ -24,6 +24,8 @@ namespace Web.Infrastructure.Data
         public virtual DbSet<Favorite> Favorites { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<CartItem> CartItems { get; set; }
+        public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<Chat> Chats { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
 		{
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -51,6 +53,24 @@ namespace Web.Infrastructure.Data
                 .WithMany()
                 .HasForeignKey(f => f.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<ChatMessage>()
+              .HasIndex(c => new { c.SenderUserId, c.ReceiverUserId, c.CreatedAt });
+
+            builder.Entity<ChatMessage>()
+             .HasIndex(c => new { c.ReceiverUserId, c.SenderUserId, c.CreatedAt });
+
+            builder.Entity<Chat>(entity =>
+            {
+
+                entity.HasIndex(c => new { c.FirstUserId, c.SecondUserId })
+                      .IsUnique();
+
+
+                entity.HasMany(c => c.Messages)
+                      .WithOne(m => m.Chat)
+                      .HasForeignKey(m => m.ChatId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
         }
 	}
 }

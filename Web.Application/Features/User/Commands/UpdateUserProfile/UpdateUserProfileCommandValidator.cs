@@ -18,16 +18,8 @@ public class UpdateUserProfileCommandValidator : AbstractValidator<UpdateUserPro
 			.NotEmpty().WithMessage("Phone number is required.")
 			.Matches(@"^\+?[0-9]{7,15}$").WithMessage("Invalid phone number format. Accepted format: +123456789 or 123456789.");
 
-		RuleFor(x => x.ProfilePicture)
-			.Must(BeAValidImage).When(x => x.ProfilePicture != null)
-			.WithMessage("Only JPEG and PNG files are allowed.");
+		
 	}
 
-	private bool BeAValidImage(IFormFile? file)
-	{
-		if (file == null) return true;
-
-		var allowedContentTypes = new[] { "image/jpeg", "image/png" };
-		return allowedContentTypes.Contains(file.ContentType);
-	}
+	
 }

@@ -12,6 +12,7 @@ namespace Web.Domain.DTOs.ProductDTO
         public Guid Id { get; set; }
         public string Comment { get; set; }
         public double Rate { get; set; }
+        public DateOnly Date {  get; set; }
         public UserDTO User { get; set; }
     }
     public class UserDTO

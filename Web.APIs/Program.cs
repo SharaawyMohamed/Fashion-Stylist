@@ -14,6 +14,9 @@ using Web.Domain.DTOs.AccountDTO;
 using Microsoft.AspNetCore.Builder.Extensions;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using Web.Application.Hubs;
+using Microsoft.AspNetCore.SignalR;
+using Web.Infrastructure.Repositories;
 
 namespace Web.APIs
 {
@@ -38,6 +41,19 @@ namespace Web.APIs
             {
                 Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json")),
             });
+            builder.Services.AddSignalR();
+
+            builder.Services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials()
+                          .SetIsOriginAllowed(_ => true);
+                });
+            });
 
             var app = builder.Build();
 			if (app.Environment.IsDevelopment())
@@ -53,7 +69,7 @@ namespace Web.APIs
 			{
 				app.UseSwagger();
 				app.UseSwaggerUI();
-
+                app.UseCors();
                 app.Use(async (ctx, next) =>
                 {
                     if (ctx.Request.Path == "/")
@@ -72,8 +88,8 @@ namespace Web.APIs
 
 			app.UseAuthentication();
 			app.UseAuthorization();
-
-			app.MapControllers();
+            app.MapHub<ChatHub>("/chatHub");
+            app.MapControllers();
 
 			app.Run();
 		}
