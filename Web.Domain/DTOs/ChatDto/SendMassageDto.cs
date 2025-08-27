@@ -11,7 +11,7 @@ namespace Web.Domain.DTOs.ChatDto
     {
         [Required]
         public string ReceiverUserId { get; set; }
-        [Required]
+     
         public string Content { get; set; }
        
        

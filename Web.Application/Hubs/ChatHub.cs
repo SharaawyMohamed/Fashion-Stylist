@@ -16,8 +16,8 @@ namespace Web.Application.Hubs
                 SenderUserId = senderId,
                 ReceiverUserId = receiverId,
                 Content = content,
-                Timestamp = DateTime.UtcNow
-            };
+                Timestamp = DateTime.UtcNow.ToString("hh:mm tt")
+        };
 
 
             await Clients.User(receiverId).SendAsync("ReceiveMessage", message);

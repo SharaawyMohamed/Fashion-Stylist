@@ -83,22 +83,30 @@ namespace Web.APIs.Controllers
 
            await _hubContext.Clients.User(userId).SendAsync("MessageSent", message);
             await _hubContext.Clients.User(dto.ReceiverUserId).SendAsync("ReceiveMessage", message);
-            var reciver = await _context.Users.FirstOrDefaultAsync(u => u.Id == dto.ReceiverUserId);
-           // if (reciver.FCM_Token != null)
-            //{
-            //    var massage = new Message()
-            //    {
-            //        Token = reciver.FCM_Token,
-            //        Notification = new Notification
-            //        {
-            //            Title =reciver.FullName,
-            //            Body = dto.Content
-            //        }
-            //    };
+           
+            var receiver = await _context.Users.FirstOrDefaultAsync(u => u.Id == dto.ReceiverUserId);
+            if (receiver?.FCM_Token != null)
+            {
+                var fcmMessage = new Message()
+                {
+                    Token = receiver.FCM_Token,
+                    Notification = new Notification
+                    {
+                        Title = "New Massage",
+                        Body = dto.Content
+                    }
+                };
 
-            //    string response = await FirebaseMessaging.DefaultInstance.SendAsync(massage);
-            //    return Ok("Notification was sended to this User");
-            //}
+                try
+                {
+                    string response = await FirebaseMessaging.DefaultInstance.SendAsync(fcmMessage);
+                    Console.WriteLine($"FCM sent: {response}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"FCM error: {ex.Message}");
+                }
+            }
 
             return Ok("Message sent");
         }
@@ -145,6 +153,7 @@ namespace Web.APIs.Controllers
                     SenderUserId = m.SenderUserId,
                     CreatedAt = m.CreatedAt,
                     ReceiverUserId = m.ReceiverUserId
+                   
                 })
             .ToList();
 

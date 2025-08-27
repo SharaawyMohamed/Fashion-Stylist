@@ -11,7 +11,7 @@ namespace Web.Domain.DTOs.ChatDto
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public string SenderUserId { get; set; }
-
+        public string CreatedAtFormatted => CreatedAt.ToString("hh:mm tt");
 
         public string ReceiverUserId { get; set; }
 

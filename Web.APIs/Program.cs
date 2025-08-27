@@ -33,13 +33,15 @@ namespace Web.APIs
 			builder.Services.AddSwaggerGen();
 
 			builder.Services.AddHttpContextAccessor();
+            builder.Services.AddHttpClient();
 
-			builder.Services.AddInfrastructure(builder.Configuration)
+
+            builder.Services.AddInfrastructure(builder.Configuration)
 				.AddJWTConfigurations(builder.Configuration)
 				.AddApplication();
             FirebaseApp.Create(new AppOptions()
             {
-                Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json")),
+                Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "e-fashion-f1215-firebase-adminsdk-fbsvc-3e488f2626.json")),
             });
             builder.Services.AddSignalR();
 

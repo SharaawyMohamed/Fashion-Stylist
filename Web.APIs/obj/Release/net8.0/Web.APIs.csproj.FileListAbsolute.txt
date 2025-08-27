@@ -503,7 +503,6 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\refin
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\Web.APIs.pdb
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\Web.APIs.genruntimeconfig.cache
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\obj\Release\net8.0\ref\Web.APIs.dll
-F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\FirebaseAdmin.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Api.Gax.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Google.Api.Gax.Rest.dll
@@ -517,3 +516,4 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Micro
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\Microsoft.Extensions.ObjectPool.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.APIs\bin\Release\net8.0\e-fashion-f1215-firebase-adminsdk-fbsvc-3e488f2626.json

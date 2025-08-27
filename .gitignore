@@ -397,3 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 Web.APIs/fashonstyle-50fa1-firebase-adminsdk-fbsvc-12b9d73c88.json
+*.json
