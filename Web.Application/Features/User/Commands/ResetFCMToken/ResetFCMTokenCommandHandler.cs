@@ -37,7 +37,7 @@ namespace Web.Application.Features.User.Commands.ResetFCMToken
                 return await BaseResponse.Fail(errors, statusCode: System.Net.HttpStatusCode.Unauthorized);
             }
 
-            user.FCM_Token = request.fcmToken;
+            user.FCM_Token = request.fcmToken ?? string.Empty;
 
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)

@@ -16,8 +16,13 @@ namespace Web.Application.Hubs
                 SenderUserId = senderId,
                 ReceiverUserId = receiverId,
                 Content = content,
-                Timestamp = DateTime.UtcNow.ToString("hh:mm tt")
-        };
+
+                CreatedAtFormatted = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time")).ToString("hh:mm tt")
+
+
+        
+
+            };
 
 
             await Clients.User(receiverId).SendAsync("ReceiveMessage", message);

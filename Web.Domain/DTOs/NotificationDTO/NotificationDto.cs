@@ -9,7 +9,7 @@ namespace Web.Domain.DTOs.NotificationDTO
     public class NotificationDto
     {
         
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
     }
 }

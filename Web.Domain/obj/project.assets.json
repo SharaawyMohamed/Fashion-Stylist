@@ -4554,23 +4554,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hhhh\\.nuget\\packages\\": {},
+    "C:\\Users\\CS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
+      "projectUniqueName": "F:\\My Projects\\Fashion-Stylist\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
       "projectName": "Web.Domain",
-      "projectPath": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
-      "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.Domain\\obj\\",
+      "projectPath": "F:\\My Projects\\Fashion-Stylist\\Fashion-Stylist\\Web.Domain\\Web.Domain.csproj",
+      "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+      "outputPath": "F:\\My Projects\\Fashion-Stylist\\Fashion-Stylist\\Web.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hhhh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4595,9 +4595,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4646,7 +4645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
