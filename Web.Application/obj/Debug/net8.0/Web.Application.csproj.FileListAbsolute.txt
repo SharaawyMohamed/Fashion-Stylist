@@ -52,3 +52,21 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Debug\net8.0\
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Debug\net8.0\refint\Web.Application.dll
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.pdb
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Application\obj\Debug\net8.0\ref\Web.Application.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Application.deps.json
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Application.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Application.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Domain.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Infrastructure.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Domain.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\bin\Debug\net8.0\Web.Infrastructure.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.sourcelink.json
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Appl.6218106C.Up2Date
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\refint\Web.Application.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\Web.Application.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Application\obj\Debug\net8.0\ref\Web.Application.dll

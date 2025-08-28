@@ -1,44 +1,32 @@
-
-using FluentValidation;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Web.APIs.Validators;
-using Web.Application;
-using Web.Application.Mapping;
-using Web.Domain.Entites;
-using Web.Infrastructure;
-using Web.Infrastructure.Data;
-using Web.Infrastructure.Service;
-using Web.Domain.DTOs.AccountDTO;
-using Microsoft.AspNetCore.Builder.Extensions;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
-using Web.Application.Hubs;
 using Microsoft.AspNetCore.SignalR;
+using Web.Application;
+using Web.Application.Hubs;
+using Web.Infrastructure;
 using Web.Infrastructure.Repositories;
 
 namespace Web.APIs
 {
-	public class Program
-	{
-		public static async Task Main(string[] args)
-		{
-			var builder = WebApplication.CreateBuilder(args);
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
 
 
-			builder.Services.AddControllers();
+            builder.Services.AddControllers();
 
-			builder.Services.AddEndpointsApiExplorer();
-			builder.Services.AddSwaggerGen();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
-			builder.Services.AddHttpContextAccessor();
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddHttpClient();
 
 
             builder.Services.AddInfrastructure(builder.Configuration)
-				.AddJWTConfigurations(builder.Configuration)
-				.AddApplication();
+                .AddJWTConfigurations(builder.Configuration)
+                .AddApplication();
             FirebaseApp.Create(new AppOptions()
             {
                 Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "e-fashion-f1215-firebase-adminsdk-fbsvc-3e488f2626.json")),
@@ -58,19 +46,19 @@ namespace Web.APIs
             });
 
             var app = builder.Build();
-			if (app.Environment.IsDevelopment())
-			{
-				using (var scope = app.Services.CreateScope())
-				{
-					var services = scope.ServiceProvider;
-					await IdentitySeeder.SeedAdminAsync(services);
-				}
-			}
+            if (app.Environment.IsDevelopment())
+            {
+                using (var scope = app.Services.CreateScope())
+                {
+                    var services = scope.ServiceProvider;
+                    await IdentitySeeder.SeedAdminAsync(services);
+                }
+            }
 
-			//if (app.Environment.IsDevelopment())
-			{
-				app.UseSwagger();
-				app.UseSwaggerUI();
+            //if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
                 app.UseCors();
                 app.Use(async (ctx, next) =>
                 {
@@ -83,17 +71,17 @@ namespace Web.APIs
                 });
             }
 
-			app.UseHttpsRedirection();
-			app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
-			app.UseRouting();
+            app.UseRouting();
 
-			app.UseAuthentication();
-			app.UseAuthorization();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.MapHub<ChatHub>("/chatHub");
             app.MapControllers();
 
-			app.Run();
-		}
-	}
+            app.Run();
+        }
+    }
 }

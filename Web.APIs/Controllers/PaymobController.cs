@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Web.Domain.DTOs.PaymentDTO;
 
 namespace Web.APIs.Controllers
@@ -80,7 +78,7 @@ namespace Web.APIs.Controllers
             return result.Token;
         }
 
-        
+
         [HttpPost("pay")]
         public async Task<IActionResult> Pay([FromBody] PaymentDto dto)
         {
@@ -101,6 +99,39 @@ namespace Web.APIs.Controllers
             // هنا لازم تتحقق من HMAC وتعمل Update للـ DB حسب النجاح أو الفشل
             return Ok();
         }
+
+        [HttpPost("GetPaymentStatus")]
+        public async Task<ActionResult<PaymentStatusDto>> GetPaymentStatus([FromBody] int OrderId)
+        {
+
+            _httpClient.DefaultRequestHeaders.Authorization =
+        new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", await GetAuthTokenAsync());
+
+            var response = await _httpClient.PostAsJsonAsync("https://accept.paymob.com/api/ecommerce/orders/transaction_inquiry",
+                new
+                {
+                    order_id = OrderId
+                });
+            //var result = await response.Content.ReadFromJsonAsync<PaymentStatusDto>();
+            //result.OrderPrice /= 100;
+
+            var json = await response.Content.ReadAsStringAsync();
+            using var doc = JsonDocument.Parse(json);
+
+            var root = doc.RootElement;
+            var status = new PaymentStatusDto
+            {
+                pending = root.GetProperty("pending").GetBoolean(),
+                success = root.GetProperty("success").GetBoolean(),
+                TransTime = root.GetProperty("created_at").GetDateTime(),
+                OrderPrice = root.GetProperty("amount_cents").GetDecimal() / 100,
+                FName = root.GetProperty("order").GetProperty("shipping_data").GetProperty("first_name").GetString() ?? "NA",
+                LName = root.GetProperty("order").GetProperty("shipping_data").GetProperty("last_name").GetString() ?? "NA"
+            };
+
+            return Ok(status);
+        }
+
     }
 
     // DTOs
@@ -124,4 +155,21 @@ namespace Web.APIs.Controllers
     {
         public string Token { get; set; }
     }
+
+    public class PaymentStatusDto
+    {
+        public bool pending { get; set; }
+        public bool success { get; set; }
+
+        [JsonPropertyName("created_at")]
+        public DateTime TransTime { get; set; }
+        [JsonPropertyName("first_name")]
+        public string FName { get; set; }
+        [JsonPropertyName("last_name")]
+        public string LName { get; set; }
+        [JsonPropertyName("amount_cents")]
+        public decimal OrderPrice { get; set; }
+    }
+
+
 }

@@ -43,3 +43,18 @@ F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\refin
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.pdb
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.genruntimeconfig.cache
 F:\My Projects\Fashion-Stylist\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\ref\Web.Domain.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\bin\Debug\net8.0\Web.Domain.deps.json
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\bin\Debug\net8.0\Web.Domain.runtimeconfig.json
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\bin\Debug\net8.0\Web.Domain.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\bin\Debug\net8.0\Web.Domain.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.sourcelink.json
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\refint\Web.Domain.dll
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.pdb
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\Web.Domain.genruntimeconfig.cache
+C:\Users\hhhh\Desktop\Fashion-Stylist\Web.Domain\obj\Debug\net8.0\ref\Web.Domain.dll

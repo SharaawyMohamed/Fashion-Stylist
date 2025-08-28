@@ -1,6 +1,5 @@
 {
   "Version": 1,
-  "ManifestType": "Publish",
   "Endpoints": [
     {
       "Route": "files/images/61d79a39-e1bb-45b6-beea-3ae97de24601.jpg",
@@ -29,7 +28,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 16:00:39 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66,7 +65,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 16:00:39 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -111,7 +110,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 08:48:31 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -156,7 +155,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 08:48:31 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -193,7 +192,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:48:22 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -230,7 +229,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:48:22 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -275,7 +274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:50:26 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
@@ -312,7 +311,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 15:50:26 GMT"
+          "Value": "Wed, 27 Aug 2025 19:27:47 GMT"
         }
       ],
       "EndpointProperties": [
