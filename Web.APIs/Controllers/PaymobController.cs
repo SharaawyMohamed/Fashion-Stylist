@@ -101,7 +101,7 @@ namespace Web.APIs.Controllers
         }
 
         [HttpPost("GetPaymentStatus")]
-        public async Task<ActionResult<PaymentStatusDto>> GetPaymentStatus([FromBody] int OrderId)
+        public async Task<ActionResult<PaymentStatusDto>> GetPaymentStatus([FromQuery] int OrderId)
         {
 
             _httpClient.DefaultRequestHeaders.Authorization =
