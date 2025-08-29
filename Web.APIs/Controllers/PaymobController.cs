@@ -25,6 +25,7 @@ namespace Web.APIs.Controllers
             return Ok(await _paymopService.GetPayGateAsync(Model));
         }
 
+
         [HttpPost("GetPaymentStatus")]
         public async Task<ActionResult<PaymentStatusDto>> GetPaymentStatus([FromQuery] int OrderId)
         {

@@ -43,15 +43,15 @@ namespace Web.APIs.Controllers
 			return Ok(await _mediator.Send(command));
 		}
 
-		[Authorize]
-		[HttpPatch("{fcmToken}")]
-		public async Task<ActionResult<BaseResponse>> ResetFCMToken(string fcmToken)
-		{
-			var command = new ResetFCMTokenCommand(fcmToken);
-			return Ok(await _mediator.Send(command));
-		}
+        [Authorize]
+        [HttpPatch("{fcmToken?}")] 
+        public async Task<ActionResult<BaseResponse>> ResetFCMToken(string? fcmToken)
+        {
+            var command = new ResetFCMTokenCommand(fcmToken ?? string.Empty);
+            return Ok(await _mediator.Send(command));
+        }
 
-		[Authorize]
+        [Authorize]
 		[HttpPost("change-password")]
 		public async Task<ActionResult<BaseResponse>> ChangePassword(ChangePasswordCommand changPassword)
 		{
