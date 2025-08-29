@@ -1,8 +1,9 @@
 ﻿
 using FluentValidation;
+using Mapster;
+using MapsterMapper;
 using MediatR.NotificationPublishers;
 using Microsoft.Extensions.DependencyInjection;
-using Mapster;
 using System.Reflection;
 using Web.APIs.Validators;
 using Web.Application.Mapping;
@@ -11,15 +12,14 @@ using Web.Domain.Interfaces;
 using Web.Domain.Repositories;
 using Web.Infrastructure.Repositories;
 using Web.Infrastructure.Service;
-using MapsterMapper;
 
 
 namespace Web.Application
 {
-	public static class DependencyInjection
-	{
-		public static IServiceCollection AddApplication(this IServiceCollection services)
-		{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddApplication(this IServiceCollection services)
+        {
             var config = TypeAdapterConfig.GlobalSettings;
             config.Scan(typeof(MappingProfile).Assembly);
 
@@ -27,23 +27,25 @@ namespace Web.Application
             services.AddScoped<IMapper, ServiceMapper>();
 
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
-			services.AddValidatorsFromAssemblyContaining<RegisterDTOValidator>();
+            services.AddValidatorsFromAssemblyContaining<RegisterDTOValidator>();
 
-			services.AddMediatR(cfg =>
-			{
-				cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-				cfg.NotificationPublisher = new TaskWhenAllPublisher();
-			});
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+                cfg.NotificationPublisher = new TaskWhenAllPublisher();
+            });
 
-			services.AddScoped<IUnitOfWork, UnitOfWrok>();
-			services.AddScoped<IAccountService, AccountService>();
-			services.AddScoped<IAuthService, AuthService>();
-			services.AddScoped<IMediaService,MediaService>();
-			services.AddTransient<IAuthService, AuthService>();
-			services.AddTransient<IEmailService, EmailService>();
-			services.AddMemoryCache();
+            services.AddScoped<IUnitOfWork, UnitOfWrok>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IMediaService, MediaService>();
+            services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IPaymopService, PaymopService>();
 
-			return services;
-		}
-	}
+            services.AddMemoryCache();
+
+            return services;
+        }
+    }
 }
