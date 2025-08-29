@@ -141,6 +141,7 @@ namespace Web.Application.Service
             };
             StatusData.Date = StatusData.TransTime.ToString("dd-MMM-yyyy");
             StatusData.Time = StatusData.TransTime.ToString("hh:mm tt");
+            StatusData.DeliveryDate = StatusData.TransTime.AddDays(2).ToString("dd-MMM-yyyy");
             return StatusData;
         }
     }
