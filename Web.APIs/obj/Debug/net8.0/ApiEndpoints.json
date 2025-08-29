@@ -27,6 +27,26 @@
   },
   {
     "ContainingType": "Web.APIs.Controllers.AccountController",
+    "Method": "GetAllTrans",
+    "RelativePath": "api/Account/GetAllTrans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[Web.Domain.DTOs.AccountDTO.AccountTransactionDto, Web.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web.APIs.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",

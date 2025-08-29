@@ -11,11 +11,13 @@ namespace Web.Application.Service
 
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
+        private readonly IAccountService _accountService;
 
-        public PaymopService(HttpClient httpClient, IConfiguration config)
+        public PaymopService(HttpClient httpClient, IConfiguration config, IAccountService accountService)
         {
             _httpClient = httpClient;
             _config = config;
+            this._accountService = accountService;
         }
 
         public async Task<string?> GetAuthTokenAsync()
@@ -89,10 +91,13 @@ namespace Web.Application.Service
 
             string iframeUrl = $"https://accept.paymob.com/api/acceptance/iframes/{_config["Paymob:IframeId"]}?payment_token={paymentKey}";
 
+            await _accountService.AddTransAsync(Model.UserId, orderId.Value, Model.Amount);
+
             return new PayGateDto
             {
-                PaymentKey = iframeUrl,
-                OrderId = orderId ?? 0
+                PaymentGate = iframeUrl,
+                OrderId = orderId ?? 0,
+                Amount = Model.Amount
             };
         }
 
@@ -107,7 +112,20 @@ namespace Web.Application.Service
                 {
                     order_id = OrderId
                 });
-
+            if (response.IsSuccessStatusCode == false)
+            {
+                return new PaymentStatusDto
+                {
+                    pending = true,
+                    success = false,
+                    Date = DateTime.Now.ToString("dd-MMM-yyyy"),
+                    Time = DateTime.Now.ToString("hh:mm tt"),
+                    FName = "NA",
+                    LName = "NA",
+                    OrderPrice = 0,
+                    TransTime = DateTime.Now
+                };
+            }
             var json = await response.Content.ReadAsStringAsync();
             using var doc = JsonDocument.Parse(json);
 
