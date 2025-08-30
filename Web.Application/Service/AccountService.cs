@@ -17,6 +17,7 @@ using Web.Domain.Entites;
 using Web.Domain.Enums;
 using Web.Domain.Interfaces;
 using Web.Domain.Response;
+using static System.Net.WebRequestMethods;
 
 namespace Web.Infrastructure.Service
 {
@@ -94,8 +95,14 @@ namespace Web.Infrastructure.Service
 
 				newUser.ProfilePicture = profilePicture;
 			}
+            if (registerDto.ProfilePicture == null)
+            {
+				var profilePicture = "https://drive.google.com/file/d/1oLoHL2ZYpm0KFwpRWmb2y-g6QGvTKbNi/view";
+               
+                newUser.ProfilePicture = profilePicture;
+            }
 
-			var Result = await _userManager.CreateAsync(newUser, registerDto.Password);
+            var Result = await _userManager.CreateAsync(newUser, registerDto.Password);
 
 			if (!Result.Succeeded)
 			{
