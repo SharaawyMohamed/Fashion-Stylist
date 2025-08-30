@@ -27,6 +27,26 @@
   },
   {
     "ContainingType": "Web.APIs.Controllers.AccountController",
+    "Method": "GetAllTrans",
+    "RelativePath": "api/Account/GetAllTrans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[Web.Domain.DTOs.AccountDTO.AccountTransactionDto, Web.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web.APIs.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",
@@ -495,7 +515,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Web.APIs.Controllers.PaymentStatusDto",
+        "Type": "Web.Domain.DTOs.PaymentDTO.PaymentStatusDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -514,28 +534,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
+        "Name": "Model",
         "Type": "Web.Domain.DTOs.PaymentDTO.PaymentDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.APIs.Controllers.PaymobController",
-    "Method": "PaymobWebhook",
-    "RelativePath": "api/Paymob/webhook",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "payload",
-        "Type": "System.Object",
-        "IsRequired": true
+        "Type": "Web.Domain.DTOs.PaymentDTO.PayGateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
     "ContainingType": "Web.APIs.Controllers.ProductsController",
@@ -621,7 +635,7 @@
       {
         "Name": "fcmToken",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [

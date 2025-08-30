@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Web.Domain.DTOs.PaymentDTO
 {
@@ -13,5 +9,7 @@ namespace Web.Domain.DTOs.PaymentDTO
         public string LName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        [JsonIgnore]
+        public string? UserId { get; set; }
     }
 }

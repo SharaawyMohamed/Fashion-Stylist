@@ -545,6 +545,31 @@ namespace Web.Infrastructure.Migrations
                     b.ToTable("Reviews");
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.Transactions", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("TransactionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -697,9 +722,22 @@ namespace Web.Infrastructure.Migrations
                     b.Navigation("product");
                 });
 
+            modelBuilder.Entity("Web.Domain.Entites.Transactions", b =>
+                {
+                    b.HasOne("Web.Domain.Entites.AppUser", "User")
+                        .WithMany("transactions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Web.Domain.Entites.AppUser", b =>
                 {
                     b.Navigation("Favorites");
+
+                    b.Navigation("transactions");
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Cart", b =>

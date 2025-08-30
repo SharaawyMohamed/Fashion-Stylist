@@ -1,12 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using Web.Domain.Entites;
 
 namespace Web.Infrastructure.Data
@@ -26,10 +20,11 @@ namespace Web.Infrastructure.Data
         public virtual DbSet<CartItem> CartItems { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<Chat> Chats { get; set; }
+        public DbSet<Transactions> Transactions { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
-		{
+        {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-			base.OnModelCreating(builder);
+            base.OnModelCreating(builder);
 
             builder.Entity<Cart>()
               .HasMany(c => c.Items)
@@ -72,5 +67,5 @@ namespace Web.Infrastructure.Data
                       .OnDelete(DeleteBehavior.Cascade);
             });
         }
-	}
+    }
 }
