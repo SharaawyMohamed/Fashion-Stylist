@@ -9,11 +9,7 @@ using Web.Domain.DTOs.AccountDTO;
 using Web.Domain.Entites;
 using Web.Domain.Interfaces;
 using Web.Domain.Response;
-<<<<<<< HEAD
-using static System.Net.WebRequestMethods;
-=======
 using Web.Infrastructure.Data;
->>>>>>> 6c3ec6e242bb9577b50db344e77dce978d05644e
 
 namespace Web.Infrastructure.Service
 {
@@ -60,91 +56,11 @@ namespace Web.Infrastructure.Service
         }
 
 
-<<<<<<< HEAD
-		public async Task<BaseResponse> RegisterAsync(RegisterDTO registerDto)
-		{
-			var validation=await _registerValidator.ValidateAsync(registerDto);
-			if (!validation.IsValid)
-			{
-				return await BaseResponse.ValidationError(validation.Errors.Select(e => e.ErrorMessage).ToList(), "Validation failed!", HttpStatusCode.BadRequest);
-			}
 
-			var user = await _userManager.FindByEmailAsync(registerDto.Email);
-			if(user != null)
-			{
-				var errors = new List<string> { "Email already exist!" };
-				return await BaseResponse.Fail(errors);
-			}
-
-			var newUser = new AppUser()
-			{
-				FullName = registerDto.FullName,
-				UserName = registerDto.Email.Split('@')[0],
-				FCM_Token = registerDto.FCM_Token,
-				Email = registerDto.Email,
-			};
-
-			if (registerDto.ProfilePicture != null)
-			{
-				var profilePicture = await _mediaService.UploadImageAsync(registerDto.ProfilePicture);
-				if (profilePicture == null)
-				{
-					var errors = new List<string> { "Profile picture upload failed!" };
-					return await BaseResponse.Fail(errors);
-				}
-
-				newUser.ProfilePicture = profilePicture;
-			}
-            if (registerDto.ProfilePicture == null)
-            {
-				var profilePicture = "https://drive.google.com/file/d/1oLoHL2ZYpm0KFwpRWmb2y-g6QGvTKbNi/view";
-               
-                newUser.ProfilePicture = profilePicture;
-            }
-
-            var Result = await _userManager.CreateAsync(newUser, registerDto.Password);
-
-			if (!Result.Succeeded)
-			{
-				var errors = Result.Errors.Select(E => E.Description).ToList();
-				return await BaseResponse.Fail(errors, "UnExpected error!", HttpStatusCode.InternalServerError);
-			}
-			var Token = await _authService.CreateTokenAsync(newUser, _userManager);
-			return await BaseResponse.Success(Token, "Your account created successfully!");
-		}
-
-		public async Task<BaseResponse> LoginAsync(LoginDTO loginDto)
-		{
-			var validation=await _loginValidator.ValidateAsync(loginDto);
-			if (!validation.IsValid)
-			{
-				return await BaseResponse.ValidationError(validation.Errors.Select(x => x.ErrorMessage).ToList(), "Validation Error", HttpStatusCode.BadRequest);
-			}
-
-			var user = await _userManager.FindByEmailAsync(loginDto.Email);
-			if (user == null)
-			{
-				var errors = new List<string> { "Email not found!." };
-				return await BaseResponse.Fail(errors);
-			}
-
-			var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
-
-			if (!result.Succeeded)
-			{
-				var errors= new List<string> { "Invalid email or password!" };
-				return await BaseResponse.Fail(errors);
-			}
-
-			user.FCM_Token=loginDto.FCM_Token;
-		    await _userManager.UpdateAsync(user);
-			var obj = new LoginResDto
-=======
         public async Task<BaseResponse> RegisterAsync(RegisterDTO registerDto)
         {
             var validation = await _registerValidator.ValidateAsync(registerDto);
             if (!validation.IsValid)
->>>>>>> 6c3ec6e242bb9577b50db344e77dce978d05644e
             {
                 return await BaseResponse.ValidationError(validation.Errors.Select(e => e.ErrorMessage).ToList(), "Validation failed!", HttpStatusCode.BadRequest);
             }

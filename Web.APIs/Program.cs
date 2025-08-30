@@ -1,3 +1,5 @@
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 using Microsoft.AspNetCore.SignalR;
 using Web.Application;
 using Web.Application.Hubs;
@@ -25,10 +27,10 @@ namespace Web.APIs
             builder.Services.AddInfrastructure(builder.Configuration)
                 .AddJWTConfigurations(builder.Configuration)
                 .AddApplication();
-            //FirebaseApp.Create(new AppOptions()
-            //{
-            //    //Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "e-fashion-f1215-firebase-adminsdk-fbsvc-3e488f2626.json")),
-            //});
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "e-fashion-f1215-firebase-adminsdk-fbsvc-3e488f2626.json")),
+            });
             builder.Services.AddSignalR();
 
             builder.Services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
