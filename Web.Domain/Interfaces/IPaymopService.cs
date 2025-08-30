@@ -9,7 +9,7 @@ namespace Web.Domain.Interfaces
         public Task<string> GetPaymentKeyAsync(string token, int orderId, decimal amount, string First_name, string Last_name, string Email, string PhoneNumber);
 
         public Task<PayGateDto> GetPayGateAsync(PaymentDto Model);
-        public Task<PaymentStatusDto> GetPaymentStatusAsync(int OrderId);
+        public Task<PaymentStatusDto> GetPaymentStatusAsync(int OrderId, string UserId);
 
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -20,11 +18,11 @@ namespace Web.APIs.Controllers
             _context = dbContext;
         }
         [Authorize]
-        [HttpGet()]
+        [HttpGet]
         public async Task<IActionResult> GetCart()
         {
             var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier);
-           
+
             var cart = await _context.Carts
        .Include(c => c.Items)
        .ThenInclude(i => i.Product)
@@ -40,9 +38,9 @@ namespace Web.APIs.Controllers
                     ProductTitle = item.Product.title,
                     Quantity = item.Quantity,
                     Price = item.Product.basePrice,
-                   Color=item.Color,
-                   Size=item.sizes,
-                   
+                    Color = item.Color,
+                    Size = item.sizes,
+
                     Image = item.Product.pictureUrl,
                     TotalPriceForProduct = item.TotalPriceForProduct
                 }).ToList(),
@@ -79,8 +77,8 @@ namespace Web.APIs.Controllers
                     Quantity = sendCartItemDTO.Quantity,
                     CartId = cart.id,
                     sizes = sendCartItemDTO.Size,
-                    Color=sendCartItemDTO.Color
-                    
+                    Color = sendCartItemDTO.Color
+
                 };
                 await _context.CartItems.AddAsync(cartItem);
             }
@@ -116,14 +114,14 @@ namespace Web.APIs.Controllers
             if (item == null) return Ok("Item not found in cart.");
 
             item.Quantity++;
-          
+
             await _context.SaveChangesAsync();
-           return Ok(new
-    {
-        item.ProductId,
-        item.Quantity,
-        item.TotalPriceForProduct
-    });
+            return Ok(new
+            {
+                item.ProductId,
+                item.Quantity,
+                item.TotalPriceForProduct
+            });
 
         }
 
@@ -139,7 +137,7 @@ namespace Web.APIs.Controllers
             if (item == null) return Ok("Item not found in cart.");
 
             item.Quantity--;
-
+            item.Quantity = Math.Max(item.Quantity, 0);
             await _context.SaveChangesAsync();
             return Ok(new
             {

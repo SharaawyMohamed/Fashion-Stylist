@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Net.Http.Json;
 using System.Text.Json;
 using Web.Domain.DTOs.PaymentDTO;
 using Web.Domain.Interfaces;
+using Web.Infrastructure.Data;
 
 namespace Web.Application.Service
 {
@@ -12,12 +14,17 @@ namespace Web.Application.Service
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
         private readonly IAccountService _accountService;
+        private readonly AppDbContext _appDbContext;
 
-        public PaymopService(HttpClient httpClient, IConfiguration config, IAccountService accountService)
+        public PaymopService(HttpClient httpClient
+            , IConfiguration config
+            , IAccountService accountService
+            , AppDbContext appDbContext)
         {
             _httpClient = httpClient;
             _config = config;
-            this._accountService = accountService;
+            _accountService = accountService;
+            _appDbContext = appDbContext;
         }
 
         public async Task<string?> GetAuthTokenAsync()
@@ -101,7 +108,7 @@ namespace Web.Application.Service
             };
         }
 
-        public async Task<PaymentStatusDto> GetPaymentStatusAsync(int OrderId)
+        public async Task<PaymentStatusDto> GetPaymentStatusAsync(int OrderId, string UserId)
         {
             var token = await GetAuthTokenAsync();
             _httpClient.DefaultRequestHeaders.Authorization =
@@ -116,14 +123,14 @@ namespace Web.Application.Service
             {
                 return new PaymentStatusDto
                 {
-                    pending = true,
+                    pending = false,
                     success = false,
-                    Date = DateTime.Now.ToString("dd-MMM-yyyy"),
-                    Time = DateTime.Now.ToString("hh:mm tt"),
+                    Date = "NA",
+                    Time = "NA",
                     FName = "NA",
                     LName = "NA",
                     OrderPrice = 0,
-                    TransTime = DateTime.Now
+                    TransTime = DateTime.MinValue
                 };
             }
             var json = await response.Content.ReadAsStringAsync();
@@ -142,6 +149,17 @@ namespace Web.Application.Service
             StatusData.Date = StatusData.TransTime.ToString("dd-MMM-yyyy");
             StatusData.Time = StatusData.TransTime.ToString("hh:mm tt");
             StatusData.DeliveryDate = StatusData.TransTime.AddDays(2).ToString("dd-MMM-yyyy");
+
+            var LstOrder = await _appDbContext.Users.Where(AppContext => AppContext.Id == UserId).Include(U => U.transactions).Select(U => U.transactions.Last()).FirstOrDefaultAsync();
+
+            if (LstOrder?.TransactionId == OrderId)
+            {
+                var UserCart = _appDbContext.Carts.Where(C => C.UserAppId == UserId).FirstOrDefault();
+                if (UserCart is not null)
+                    _appDbContext.Carts.Remove(UserCart!);
+                await _appDbContext.SaveChangesAsync();
+            }
+
             return StatusData;
         }
     }

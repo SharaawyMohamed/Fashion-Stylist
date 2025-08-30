@@ -39,7 +39,8 @@ namespace Web.APIs.Controllers
         [HttpPost("GetPaymentStatus")]
         public async Task<ActionResult<PaymentStatusDto>> GetPaymentStatus([FromQuery] int OrderId)
         {
-            return Ok(await _paymopService.GetPaymentStatusAsync(OrderId));
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return Ok(await _paymopService.GetPaymentStatusAsync(OrderId, UserId ?? ""));
         }
 
     }
