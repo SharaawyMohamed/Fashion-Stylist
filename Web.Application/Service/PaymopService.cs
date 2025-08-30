@@ -150,7 +150,7 @@ namespace Web.Application.Service
             StatusData.Time = StatusData.TransTime.ToString("hh:mm tt");
             StatusData.DeliveryDate = StatusData.TransTime.AddDays(2).ToString("dd-MMM-yyyy");
 
-            var LstOrder = await _appDbContext.Users.Where(AppContext => AppContext.Id == UserId).Include(U => U.transactions).Select(U => U.transactions.Last()).FirstOrDefaultAsync();
+            var LstOrder = await _appDbContext.Users.Where(U => U.Id == UserId).Include(U => U.transactions).Select(U => U.transactions.OrderBy(T => T.id).Last()).FirstOrDefaultAsync();
 
             if (LstOrder?.TransactionId == OrderId)
             {
