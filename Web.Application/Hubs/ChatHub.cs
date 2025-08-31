@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace Web.Application.Hubs
 {
     public class ChatHub : Hub
     {
+        private readonly IConfiguration _configuration;
+
+        public ChatHub(IConfiguration configuration)
+        {
+            this._configuration = configuration;
+        }
         public async Task SendMessage(string senderId, string receiverId, string content)
         {
             var message = new
@@ -17,17 +19,17 @@ namespace Web.Application.Hubs
                 ReceiverUserId = receiverId,
                 Content = content,
 
-                CreatedAtFormatted = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time")).ToString("hh:mm tt")
+                CreatedAtFormatted = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow/*.AddHours(int.Parse(_configuration["ChatSetting:EgyptTimeZone"]))*/, TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time")).ToString("hh:mm tt")
 
 
-        
+
 
             };
 
 
             await Clients.User(receiverId).SendAsync("ReceiveMessage", message);
 
-            
+
             await Clients.User(senderId).SendAsync("MessageSent", message);
         }
 

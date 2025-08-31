@@ -1,17 +1,10 @@
-﻿using Mapster;
-using MapsterMapper;
+﻿using MapsterMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using Web.Domain.DTOs.ProductDTO;
-using Web.Domain.DTOs.UserDTO;
 using Web.Domain.Entites;
-using Web.Domain.Repositories;
 using Web.Infrastructure.Data;
 
 namespace Web.APIs.Controllers
@@ -24,14 +17,15 @@ namespace Web.APIs.Controllers
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
 
-        public ProductsController(AppDbContext dbContext , IMapper mapper)
+        public ProductsController(AppDbContext dbContext, IMapper mapper)
         {
-           _context = dbContext;
+            _context = dbContext;
             this._mapper = mapper;
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetProductById(Guid Id) {
+        public async Task<IActionResult> GetProductById(Guid Id)
+        {
 
             var product = await _context.Products
                                         .Include(p => p.reviews)
@@ -41,7 +35,7 @@ namespace Web.APIs.Controllers
             if (product == null)
                 return NotFound("Product Not Found");
 
-            var dto =  _mapper.Map<ProductDto>(product);
+            var dto = _mapper.Map<ProductDto>(product);
             return Ok(dto);
         }
 
@@ -54,13 +48,13 @@ namespace Web.APIs.Controllers
                 comment = review.Comment,
                 rate = review.rate,
                 productId = review.ProductId,
-               
+
                 userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value
             };
             _context.Reviews.Add(rev);
-         
+
             int res = _context.SaveChanges();
-            if(res == 0)
+            if (res == 0)
             {
                 return BadRequest("Can't save Review");
             }
@@ -73,14 +67,14 @@ namespace Web.APIs.Controllers
                 Id = dto.id,
                 Comment = dto.comment,
                 Rate = dto.rate,
-                Date=dto.CreatedAt,
+                Date = dto.CreatedAt,
                 User = new UserDTO
                 {
                     Id = dto.appUser.Id,
                     UserName = dto.appUser.FullName,
-                    ProfilePicture = dto.appUser.ProfilePicture,
-                    Email = dto.appUser.Email,
-                    
+                    ProfilePicture = dto.appUser.ProfilePicture ?? "",
+                    Email = dto.appUser.Email ?? "",
+
                 }
             };
             return Ok(response);

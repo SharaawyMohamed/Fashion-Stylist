@@ -1,17 +1,10 @@
-﻿using Azure.Core;
-using FirebaseAdmin.Messaging;
-using MediatR;
+﻿using FirebaseAdmin.Messaging;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Writers;
-using System;
 using System.Security.Claims;
-using System.Threading;
 using Web.Application.Hubs;
-using Web.Domain.DTOs.CartDTO;
 using Web.Domain.DTOs.ChatDto;
 using Web.Domain.Entites;
 using Web.Infrastructure.Data;
@@ -24,10 +17,13 @@ namespace Web.APIs.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IHubContext<ChatHub> _hubContext;
-        public ChatController(AppDbContext context, IHubContext<ChatHub> hubContext)
+        private readonly IConfiguration _configuration;
+
+        public ChatController(AppDbContext context, IHubContext<ChatHub> hubContext, IConfiguration configuration)
         {
             _context = context;
             _hubContext = hubContext;
+            this._configuration = configuration;
         }
         private string GetUserId()
         {
@@ -64,7 +60,7 @@ namespace Web.APIs.Controllers
             {
                 chat = await _context.Chats.FindAsync(dto.ChatId);
                 if (chat == null)
-                    return BadRequest( "Chat does not exist");
+                    return BadRequest("Chat does not exist");
             }
 
             var message = new ChatMessage
@@ -78,12 +74,12 @@ namespace Web.APIs.Controllers
             await _context.ChatMessages.AddAsync(message);
             await _context.SaveChangesAsync();
 
-       
+
             await _context.Entry(message).ReloadAsync();
 
-           await _hubContext.Clients.User(userId).SendAsync("MessageSent", message);
+            await _hubContext.Clients.User(userId).SendAsync("MessageSent", message);
             await _hubContext.Clients.User(dto.ReceiverUserId).SendAsync("ReceiveMessage", message);
-           
+
             var receiver = await _context.Users.FirstOrDefaultAsync(u => u.Id == dto.ReceiverUserId);
             if (receiver?.FCM_Token != null)
             {
@@ -110,34 +106,34 @@ namespace Web.APIs.Controllers
 
             return Ok("Message sent");
         }
-    
-       
-           [HttpDelete("{MessageId }")]
-            public async Task<IActionResult> DeleteMassage([FromRoute] int MessageId)
-               {
+
+
+        [HttpDelete("{MessageId }")]
+        public async Task<IActionResult> DeleteMassage([FromRoute] int MessageId)
+        {
             var message = await _context.ChatMessages.FindAsync(MessageId);
             if (message == null)
             {
-                return Ok( "Massage was deleted");
+                return Ok("Massage was deleted");
             }
 
             _context.ChatMessages.Remove(message);
             await _context.SaveChangesAsync();
 
             return Ok("Message deleted");
-             }
+        }
 
 
-            [Authorize]
-            [HttpGet("history/{otherUserId}")]
-            public async Task<IActionResult> GetChatHistoryMassage(string otherUserId)
-            {
+        [Authorize]
+        [HttpGet("history/{otherUserId}")]
+        public async Task<IActionResult> GetChatHistoryMassage(string otherUserId)
+        {
             var userId = GetUserId();
             var chat = await _context.Chats
            .Include(c => c.Messages)
            .FirstOrDefaultAsync(m =>
-               (m.FirstUserId == userId && m.SecondUserId ==otherUserId) ||
-               (m.SecondUserId ==userId && m.FirstUserId == otherUserId));
+               (m.FirstUserId == userId && m.SecondUserId == otherUserId) ||
+               (m.SecondUserId == userId && m.FirstUserId == otherUserId));
 
             if (chat == null)
                 return Ok("لا يوجد محادثة");
@@ -151,19 +147,19 @@ namespace Web.APIs.Controllers
                     Content = m.Content,
                     IsRead = m.IsRead,
                     SenderUserId = m.SenderUserId,
-                    CreatedAt = m.CreatedAt,
+                    CreatedAt = m.CreatedAt.AddHours(int.Parse(_configuration["ChatSetting:EgyptTimeZone"] ?? "3")),
                     ReceiverUserId = m.ReceiverUserId
-                   
+
                 })
             .ToList();
 
             return Ok(message);
         }
-            [HttpGet("GetAllChats")]
-           [Authorize]
-            public async Task<IActionResult> GetAllChats()
-            {
-               var   userId = GetUserId();
+        [HttpGet("GetAllChats")]
+        [Authorize]
+        public async Task<IActionResult> GetAllChats()
+        {
+            var userId = GetUserId();
 
             var chats = await _context.Chats
             .AsNoTracking()
@@ -198,7 +194,7 @@ namespace Web.APIs.Controllers
                     ChatId = chat.id,
                     SenderId = user.Id,
                     UserName = user.UserName!,
-                   
+
                     UnReaded = unreadCount,
                     LastMessage = LastMessage?.Content,
                     Date = LastMessage?.CreatedAt ?? chat.CreatedAt
@@ -207,14 +203,14 @@ namespace Web.APIs.Controllers
                 results.Add(chatDto);
             }
 
-            return Ok( results);
+            return Ok(results);
         }
-            [HttpPut("MakeAllMassageRead")]
-            public async Task<IActionResult> MakeAllMassageRead(int ChatId)
-            {
+        [HttpPut("MakeAllMassageRead")]
+        public async Task<IActionResult> MakeAllMassageRead(int ChatId)
+        {
             var chatExists = await _context.Chats.AnyAsync(c => c.id == ChatId);
             if (!chatExists)
-                return BadRequest( "لا يوجد محادثة");
+                return BadRequest("لا يوجد محادثة");
 
             var unReadMessages = await _context.ChatMessages
                 .Where(m => m.ChatId == ChatId && !m.IsRead)
