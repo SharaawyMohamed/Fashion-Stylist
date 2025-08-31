@@ -27,6 +27,7 @@ namespace Web.Infrastructure.Service
         private readonly IValidator<ResetPasswordDto> _resetPasswordValidator;
         private readonly IValidator<VerfiyCodeDto> _verifyCodeValidator;
         private readonly AppDbContext _appDb;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public AccountService(UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
@@ -39,7 +40,8 @@ namespace Web.Infrastructure.Service
             IValidator<ForgetPasswordDto> forgetPasswordValidator,
             IValidator<ResetPasswordDto> resetPasswordValidator,
             IValidator<VerfiyCodeDto> verifyCodeValidator,
-            AppDbContext appDb)
+            AppDbContext appDb,
+            IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -53,6 +55,7 @@ namespace Web.Infrastructure.Service
             _resetPasswordValidator = resetPasswordValidator;
             _verifyCodeValidator = verifyCodeValidator;
             _appDb = appDb;
+            this._httpContextAccessor = httpContextAccessor;
         }
 
 
@@ -82,14 +85,20 @@ namespace Web.Infrastructure.Service
 
             if (registerDto.ProfilePicture != null)
             {
-                var profilePicture = await _mediaService.UploadImageAsync(registerDto.ProfilePicture);
-                if (profilePicture == null)
+
+                var Request = _httpContextAccessor.HttpContext.Request;
+                var baseUrl = $"{Request.Scheme}://{Request.Host}";
+                var profilePictureName = _mediaService.UploadImage(registerDto.ProfilePicture, "ProfilePic");
+
+
+                if (profilePictureName == null)
                 {
                     var errors = new List<string> { "Profile picture upload failed!" };
                     return await BaseResponse.Fail(errors);
                 }
 
-                newUser.ProfilePicture = profilePicture;
+                newUser.ProfilePicture = $"{baseUrl}/Files/Gallery/{profilePictureName}"
+;
             }
 
             var Result = await _userManager.CreateAsync(newUser, registerDto.Password);
@@ -100,7 +109,7 @@ namespace Web.Infrastructure.Service
                 return await BaseResponse.Fail(errors, "UnExpected error!", HttpStatusCode.InternalServerError);
             }
             var Token = await _authService.CreateTokenAsync(newUser, _userManager);
-            return await BaseResponse.Success(new { Token, userid = newUser.Id }, "Your account created successfully!");
+            return await BaseResponse.Success(new { Token, userid = newUser.Id, newUser.ProfilePicture }, "Your account created successfully!");
         }
 
         public async Task<BaseResponse> LoginAsync(LoginDTO loginDto)
