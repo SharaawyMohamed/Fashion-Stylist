@@ -136,7 +136,7 @@ namespace Web.APIs.Controllers
                (m.SecondUserId == userId && m.FirstUserId == otherUserId));
 
             if (chat == null)
-                return Ok("لا يوجد محادثة");
+                return Ok(new List<string>());
 
             var message = chat.Messages
                 .OrderBy(m => m.CreatedAt)

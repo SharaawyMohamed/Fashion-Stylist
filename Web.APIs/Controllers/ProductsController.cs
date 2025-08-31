@@ -71,7 +71,7 @@ namespace Web.APIs.Controllers
                 User = new UserDTO
                 {
                     Id = dto.appUser.Id,
-                    UserName = dto.appUser.FullName,
+                    FullName = dto.appUser.FullName,
                     ProfilePicture = dto.appUser.ProfilePicture ?? "",
                     Email = dto.appUser.Email ?? "",
 

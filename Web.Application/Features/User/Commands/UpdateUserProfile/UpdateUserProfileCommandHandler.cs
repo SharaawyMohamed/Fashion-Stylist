@@ -55,7 +55,7 @@ namespace Web.Application.Features.User.Commands.UpdateUserProfile
                 var Request = _httpContextAccessor.HttpContext.Request;
                 var baseUrl = $"{Request.Scheme}://{Request.Host}";
                 var profilePictureName = _mediaService.UploadImage(request.ProfilePicture, "ProfilePic");
-                if (!string.IsNullOrEmpty(profilePictureName))
+                if (string.IsNullOrEmpty(profilePictureName))
                 {
                     var errors = new List<string> { "Profile picture upload failed!, please try later." };
                     return await BaseResponse.Fail(errors);

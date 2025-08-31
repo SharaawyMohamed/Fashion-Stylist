@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XOF9MOQte3RNxs/OtdgcKICVX9n4cQX5jpkdZh8XIS8=",
+  "Hash": "0iB+NEID1zptF7vMso453/lU/EFPxa3wFIlLS4d7IW0=",
   "Source": "Web.APIs",
   "BasePath": "_content/Web.APIs",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "wwwroot\\files\\images\\7742ec29-4182-4b05-986b-95fc6a08c176.jpg"
     },
     {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\8953378b-753e-4ea6-b2dc-91009f2c7733.jpg",
+      "SourceId": "Web.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
+      "BasePath": "_content/Web.APIs",
+      "RelativePath": "files/images/8953378b-753e-4ea6-b2dc-91009f2c7733#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uayo046pvg",
+      "Integrity": "pvMZlKEFlLxu4F/KAc0U7DVE46CXz5j4u42cuJHo9XE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\images\\8953378b-753e-4ea6-b2dc-91009f2c7733.jpg"
+    },
+    {
       "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
@@ -80,6 +101,27 @@
       "OriginalItemSpec": "wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg"
     },
     {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg",
+      "SourceId": "Web.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
+      "BasePath": "_content/Web.APIs",
+      "RelativePath": "files/images/d3afaa07-fe90-4041-be1e-9ddf16e39837#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qw9k3kmsz9",
+      "Integrity": "1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\images\\d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg"
+    },
+    {
       "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
       "SourceId": "Web.APIs",
       "SourceType": "Discovered",
@@ -99,6 +141,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\3b2f7499-49a5-485e-8100-8ca03f1095f0download.png",
+      "SourceId": "Web.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
+      "BasePath": "_content/Web.APIs",
+      "RelativePath": "files/ProfilePic/3b2f7499-49a5-485e-8100-8ca03f1095f0download#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ehr58uei3",
+      "Integrity": "OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ProfilePic\\3b2f7499-49a5-485e-8100-8ca03f1095f0download.png"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png",
+      "SourceId": "Web.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
+      "BasePath": "_content/Web.APIs",
+      "RelativePath": "files/ProfilePic/61df38f5-0a02-4f3d-b0da-1f3713aedf13download#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ehr58uei3",
+      "Integrity": "OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ProfilePic\\61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg",
+      "SourceId": "Web.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\",
+      "BasePath": "_content/Web.APIs",
+      "RelativePath": "files/ProfilePic/9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j201hvqppg",
+      "Integrity": "Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ProfilePic\\9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg"
     }
   ],
   "Endpoints": [
@@ -267,6 +372,88 @@
       ]
     },
     {
+      "Route": "files/images/8953378b-753e-4ea6-b2dc-91009f2c7733.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\8953378b-753e-4ea6-b2dc-91009f2c7733.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "389887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pvMZlKEFlLxu4F/KAc0U7DVE46CXz5j4u42cuJHo9XE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 04:51:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pvMZlKEFlLxu4F/KAc0U7DVE46CXz5j4u42cuJHo9XE="
+        }
+      ]
+    },
+    {
+      "Route": "files/images/8953378b-753e-4ea6-b2dc-91009f2c7733.uayo046pvg.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\8953378b-753e-4ea6-b2dc-91009f2c7733.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "389887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pvMZlKEFlLxu4F/KAc0U7DVE46CXz5j4u42cuJHo9XE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 04:51:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uayo046pvg"
+        },
+        {
+          "Name": "label",
+          "Value": "files/images/8953378b-753e-4ea6-b2dc-91009f2c7733.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pvMZlKEFlLxu4F/KAc0U7DVE46CXz5j4u42cuJHo9XE="
+        }
+      ]
+    },
+    {
       "Route": "files/images/a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
       "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\a80a2548-0b30-4d9d-910f-807841f4fd46.jpg",
       "Selectors": [],
@@ -349,6 +536,88 @@
       ]
     },
     {
+      "Route": "files/images/d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 04:48:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="
+        }
+      ]
+    },
+    {
+      "Route": "files/images/d3afaa07-fe90-4041-be1e-9ddf16e39837.qw9k3kmsz9.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 04:48:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qw9k3kmsz9"
+        },
+        {
+          "Name": "label",
+          "Value": "files/images/d3afaa07-fe90-4041-be1e-9ddf16e39837.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="
+        }
+      ]
+    },
+    {
       "Route": "files/images/e6085609-8634-4e43-bd41-db6c53546433.jpg",
       "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\images\\e6085609-8634-4e43-bd41-db6c53546433.jpg",
       "Selectors": [],
@@ -427,6 +696,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-0/t/eWyJFgv5rOFvm9UKoIY/NIP7a8mo0JbaVJyIbEQ="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/3b2f7499-49a5-485e-8100-8ca03f1095f0download.0ehr58uei3.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\3b2f7499-49a5-485e-8100-8ca03f1095f0download.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "632182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 18:37:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ehr58uei3"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ProfilePic/3b2f7499-49a5-485e-8100-8ca03f1095f0download.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/3b2f7499-49a5-485e-8100-8ca03f1095f0download.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\3b2f7499-49a5-485e-8100-8ca03f1095f0download.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "632182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 18:37:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/61df38f5-0a02-4f3d-b0da-1f3713aedf13download.0ehr58uei3.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "632182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 18:35:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ehr58uei3"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ProfilePic/61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\61df38f5-0a02-4f3d-b0da-1f3713aedf13download.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "632182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 18:35:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OMrNrTbx4mfBHwKeFMs9eV8Y6zS2tcosOd79a9BZTV0="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.j201hvqppg.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "351161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 05:07:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j201hvqppg"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ProfilePic/9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10="
+        }
+      ]
+    },
+    {
+      "Route": "files/ProfilePic/9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\Fashion-Stylist\\Web.APIs\\wwwroot\\files\\ProfilePic\\9bda6813-23b9-437a-a063-5f2bcaefe375Greatest_24.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "351161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 05:07:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10="
         }
       ]
     }

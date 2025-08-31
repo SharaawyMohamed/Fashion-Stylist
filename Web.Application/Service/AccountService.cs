@@ -75,12 +75,20 @@ namespace Web.Infrastructure.Service
                 return await BaseResponse.Fail(errors);
             }
 
+            if (await _appDb.Users.AnyAsync(U => U.PhoneNumber == registerDto.PhoneNumber))
+            {
+                var errors = new List<string> { "Phone number already exist!" };
+                return await BaseResponse.Fail(errors);
+            }
+
+
             var newUser = new AppUser()
             {
                 FullName = registerDto.FullName,
                 UserName = registerDto.Email.Split('@')[0],
                 FCM_Token = registerDto.FCM_Token,
                 Email = registerDto.Email,
+                PhoneNumber = registerDto.PhoneNumber
             };
 
             if (registerDto.ProfilePicture != null)
