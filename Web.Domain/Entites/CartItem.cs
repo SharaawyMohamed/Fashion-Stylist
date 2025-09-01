@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web.Domain.Entites
 {
@@ -25,7 +19,7 @@ namespace Web.Domain.Entites
 
         private decimal CalculateTotal()
         {
-            return Product.basePrice * Quantity;
+            return (Product.basePrice - Product.discountedPrice) * Quantity;
         }
     }
 }

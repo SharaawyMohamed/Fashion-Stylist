@@ -94,9 +94,9 @@ namespace Web.Infrastructure.Service
             if (registerDto.ProfilePicture != null)
             {
 
-                var Request = _httpContextAccessor.HttpContext.Request;
-                var baseUrl = $"{Request.Scheme}://{Request.Host}";
-                var profilePictureName = _mediaService.UploadImage(registerDto.ProfilePicture, "ProfilePic");
+                //var Request = _httpContextAccessor.HttpContext.Request;
+                //var baseUrl = $"{Request.Scheme}://{Request.Host}";
+                var profilePictureName = await _mediaService.UploadImageAsync(registerDto.ProfilePicture);
 
 
                 if (profilePictureName == null)
@@ -105,7 +105,8 @@ namespace Web.Infrastructure.Service
                     return await BaseResponse.Fail(errors);
                 }
 
-                newUser.ProfilePicture = $"{baseUrl}/Files/Gallery/{profilePictureName}"
+                //newUser.ProfilePicture = $"{baseUrl}/{profilePictureName}"
+                newUser.ProfilePicture = profilePictureName
 ;
             }
 

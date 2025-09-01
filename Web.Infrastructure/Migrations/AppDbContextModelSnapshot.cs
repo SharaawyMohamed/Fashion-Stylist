@@ -247,7 +247,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("UserAppId");
 
-                    b.ToTable("Carts");
+                    b.ToTable("Carts", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.CartItem", b =>
@@ -273,7 +273,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("CartItems");
+                    b.ToTable("CartItems", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Category", b =>
@@ -298,7 +298,7 @@ namespace Web.Infrastructure.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Chat", b =>
@@ -325,7 +325,7 @@ namespace Web.Infrastructure.Migrations
                     b.HasIndex("FirstUserId", "SecondUserId")
                         .IsUnique();
 
-                    b.ToTable("Chats");
+                    b.ToTable("Chats", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.ChatMessage", b =>
@@ -365,7 +365,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("SenderUserId", "ReceiverUserId", "CreatedAt");
 
-                    b.ToTable("ChatMessages");
+                    b.ToTable("ChatMessages", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Collection", b =>
@@ -399,7 +399,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("collections");
+                    b.ToTable("collections", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Favorite", b =>
@@ -414,7 +414,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Favorites");
+                    b.ToTable("Favorites", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Item", b =>
@@ -450,7 +450,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("title");
 
-                    b.ToTable("Items");
+                    b.ToTable("Items", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Product", b =>
@@ -509,7 +509,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("categoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Review", b =>
@@ -542,7 +542,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("userId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("Web.Domain.Entites.Transactions", b =>
@@ -567,7 +567,7 @@ namespace Web.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transactions", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

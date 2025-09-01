@@ -52,16 +52,17 @@ namespace Web.Application.Features.User.Commands.UpdateUserProfile
                 {
                     await _mediaService.DeleteAsync(user.ProfilePicture);
                 }
-                var Request = _httpContextAccessor.HttpContext.Request;
-                var baseUrl = $"{Request.Scheme}://{Request.Host}";
-                var profilePictureName = _mediaService.UploadImage(request.ProfilePicture, "ProfilePic");
-                if (string.IsNullOrEmpty(profilePictureName))
+                //var Request = _httpContextAccessor.HttpContext.Request;
+                //var baseUrl = $"{Request.Scheme}://{Request.Host}";
+                var profilePictureName = await _mediaService.UploadImageAsync(request.ProfilePicture);
+                if (profilePictureName is null)
                 {
                     var errors = new List<string> { "Profile picture upload failed!, please try later." };
                     return await BaseResponse.Fail(errors);
                 }
 
-                user.ProfilePicture = $"{baseUrl}/Files/Gallery/{profilePictureName}";
+                //user.ProfilePicture = $"{baseUrl}/{profilePictureName}";
+                user.ProfilePicture = profilePictureName;
             }
             await _userManager.UpdateAsync(user);
             return await BaseResponse.Success(user.Adapt<GetUserQueryDto>());

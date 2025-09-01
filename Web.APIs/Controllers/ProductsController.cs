@@ -48,6 +48,7 @@ namespace Web.APIs.Controllers
                 comment = review.Comment,
                 rate = review.rate,
                 productId = review.ProductId,
+                CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(3)),
 
                 userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value
             };

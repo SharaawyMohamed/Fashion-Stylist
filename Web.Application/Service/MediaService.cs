@@ -25,42 +25,42 @@ namespace Web.Application.Service
             await Task.CompletedTask;
         }
 
-        //public async Task<string> UploadImage(IFormFile Image)
-        //{
-        //	string extention = Path.GetExtension(Image.FileName);
-        //	string imageName = $"{Guid.NewGuid().ToString()}{extention}";
-
-        //	string returnedPath = Path.Combine("files", "images");
-        //	string directoryPath = Path.Combine("wwwroot", returnedPath);
-        //	if (!Directory.Exists(directoryPath))
-        //	{
-        //		Directory.CreateDirectory(directoryPath);
-        //	}
-
-        //	string imagePath = Path.Combine(directoryPath, imageName).Replace('\\', '/');
-        //	using (var stream = new FileStream(imagePath, FileMode.Create))
-        //	{
-        //		Image.CopyTo(stream);
-        //	}
-        //	returnedPath = Path.Combine(returnedPath, imageName).Replace('\\', '/');
-        //	await Task.CompletedTask;
-        //	return _configuration["BaseUrl"] + returnedPath;
-        //}
-
-        public string UploadImage(IFormFile File, string FolderName)
+        public async Task<string> UploadImageAsync(IFormFile Image)
         {
+            string extention = Path.GetExtension(Image.FileName);
+            string imageName = $"{Guid.NewGuid().ToString()}{extention}";
 
-            string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", FolderName);
+            string returnedPath = Path.Combine("files", "images");
+            string directoryPath = Path.Combine("wwwroot", returnedPath);
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
 
-            string FileName = $"{Guid.NewGuid()}{File.FileName.Replace(" ", "_")}";
-
-            string FilePath = Path.Combine(FolderPath, FileName);
-            Directory.CreateDirectory(FolderPath);
-            using var FS = new FileStream(FilePath, FileMode.Create);
-            File.CopyTo(FS);
-
-            return FileName;
+            string imagePath = Path.Combine(directoryPath, imageName).Replace('\\', '/');
+            using (var stream = new FileStream(imagePath, FileMode.Create))
+            {
+                Image.CopyTo(stream);
+            }
+            returnedPath = Path.Combine(returnedPath, imageName).Replace('\\', '/');
+            await Task.CompletedTask;
+            return _configuration["BaseUrl"] + returnedPath;
         }
+
+        //public string UploadImage(IFormFile File, string FolderName)
+        //{
+
+        //    string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", FolderName);
+
+        //    string FileName = $"{Guid.NewGuid()}{File.FileName.Replace(" ", "_")}";
+
+        //    string FilePath = Path.Combine(FolderPath, FileName);
+        //    Directory.CreateDirectory(FolderPath);
+        //    using var FS = new FileStream(FilePath, FileMode.Create);
+        //    File.CopyTo(FS);
+
+        //    return FileName;
+        //}
 
     }
 }

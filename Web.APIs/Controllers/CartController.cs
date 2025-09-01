@@ -24,9 +24,19 @@ namespace Web.APIs.Controllers
             var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var cart = await _context.Carts
-       .Include(c => c.Items)
-       .ThenInclude(i => i.Product)
-       .FirstOrDefaultAsync(c => c.UserAppId == userId);
+               .Include(c => c.Items)
+               .ThenInclude(i => i.Product)
+               .FirstOrDefaultAsync(c => c.UserAppId == userId);
+
+            if (cart is null)
+            {
+                cart = new Cart
+                {
+                    UserAppId = userId
+                };
+                _context.Carts.Add(cart);
+                await _context.SaveChangesAsync();
+            }
 
 
             var cartDto = new GetCartDto
