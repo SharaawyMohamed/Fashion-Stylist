@@ -36,6 +36,10 @@ namespace Web.APIs.Controllers
                 return NotFound("Product Not Found");
 
             var dto = _mapper.Map<ProductDto>(product);
+            foreach (var rev in dto.Reviews)
+            {
+                rev.Date = product.reviews.FirstOrDefault(r => r.id == rev.Id).CreatedAt;
+            }
             return Ok(dto);
         }
 
@@ -68,7 +72,7 @@ namespace Web.APIs.Controllers
                 Id = dto.id,
                 Comment = dto.comment,
                 Rate = dto.rate,
-                Date = dto.CreatedAt,
+                Date = rev.CreatedAt,
                 User = new UserDTO
                 {
                     Id = dto.appUser.Id,

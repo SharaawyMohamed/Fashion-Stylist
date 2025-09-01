@@ -9,7 +9,7 @@
         public List<CartItem> Items { get; set; } = new List<CartItem>();
         private decimal CalculateTotal()
         {
-            return Items.Sum(item => (item.Product.basePrice - item.Product.discountedPrice) * item.Quantity);
+            return Items.Sum(item => item.TotalPriceForProduct);
         }
     }
 }
