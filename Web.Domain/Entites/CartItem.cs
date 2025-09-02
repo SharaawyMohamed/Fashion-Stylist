@@ -19,7 +19,7 @@ namespace Web.Domain.Entites
 
         private decimal CalculateTotal()
         {
-            return (Product.basePrice - Product.discountedPrice) * Quantity;
+            return (Product.basePrice - (Product.isOffred ? (Product.discountedPrice) : 0)) * Quantity;
         }
     }
 }
