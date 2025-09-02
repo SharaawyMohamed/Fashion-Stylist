@@ -28,6 +28,7 @@ namespace Web.Infrastructure.Service
         private readonly IValidator<VerfiyCodeDto> _verifyCodeValidator;
         private readonly AppDbContext _appDb;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
         public AccountService(UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
@@ -41,7 +42,8 @@ namespace Web.Infrastructure.Service
             IValidator<ResetPasswordDto> resetPasswordValidator,
             IValidator<VerfiyCodeDto> verifyCodeValidator,
             AppDbContext appDb,
-            IHttpContextAccessor httpContextAccessor)
+            IHttpContextAccessor httpContextAccessor,
+            IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -55,7 +57,8 @@ namespace Web.Infrastructure.Service
             _resetPasswordValidator = resetPasswordValidator;
             _verifyCodeValidator = verifyCodeValidator;
             _appDb = appDb;
-            this._httpContextAccessor = httpContextAccessor;
+            _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
 
 
@@ -88,7 +91,8 @@ namespace Web.Infrastructure.Service
                 UserName = registerDto.Email.Split('@')[0],
                 FCM_Token = registerDto.FCM_Token,
                 Email = registerDto.Email,
-                PhoneNumber = registerDto.PhoneNumber
+                PhoneNumber = registerDto.PhoneNumber,
+                ProfilePicture = _configuration["DefaultProfileImage"]
             };
 
             if (registerDto.ProfilePicture != null)

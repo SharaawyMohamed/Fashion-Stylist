@@ -25,12 +25,12 @@ namespace Web.Application.Service
             await Task.CompletedTask;
         }
 
-        public async Task<string> UploadImageAsync(IFormFile Image)
+        public async Task<string> UploadImageAsync(IFormFile Image, string FolderName = "images")
         {
             string extention = Path.GetExtension(Image.FileName);
             string imageName = $"{Guid.NewGuid().ToString()}{extention}";
 
-            string returnedPath = Path.Combine("files", "images");
+            string returnedPath = Path.Combine("files", FolderName);
             string directoryPath = Path.Combine("wwwroot", returnedPath);
             if (!Directory.Exists(directoryPath))
             {
