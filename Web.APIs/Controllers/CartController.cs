@@ -47,7 +47,7 @@ namespace Web.APIs.Controllers
                     ProductId = item.ProductId,
                     ProductTitle = item.Product.title,
                     Quantity = item.Quantity,
-                    Price = item.Product.basePrice - (item.Product.discountedPrice * (item.Product.isOffred ? 1 : 0)),
+                    Price = item.Product.isOffred ? item.Product.discountedPrice : item.Product.basePrice,
                     Color = item.Color,
                     Size = item.sizes,
 
