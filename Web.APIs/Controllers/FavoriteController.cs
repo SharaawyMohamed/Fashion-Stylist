@@ -66,7 +66,7 @@ namespace Web.APIs.Controllers
                     {
                         Id = i.ProductId,
                         title = product.title,
-                        basePrice = product.basePrice - (product.isOffred ? product.discountedPrice : 0),
+                        basePrice = product.isOffred ? product.discountedPrice : product.basePrice,
                         pictureUrl = product.pictureUrl,
                         colors = product.colors,
                         sizes = product.sizes
