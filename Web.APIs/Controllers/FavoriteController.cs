@@ -1,17 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Security.Claims;
-using Web.Application.Utility;
 using Web.Domain.DTOs.FavoritDTO;
-using Web.Domain.DTOs.ProductDTO;
 using Web.Domain.Entites;
-using Web.Domain.Response;
 using Web.Infrastructure.Data;
 
 namespace Web.APIs.Controllers
@@ -36,7 +29,7 @@ namespace Web.APIs.Controllers
             var product = await _dbContext.Products.FirstOrDefaultAsync(p => p.id == ProductId);
             if (product == null)
             {
-             return BadRequest("No Product with this id");
+                return BadRequest("No Product with this id");
             }
 
             var isFavorit = await _dbContext.Favorites.FirstOrDefaultAsync(f => f.UserId == UserId && f.ProductId == ProductId);
@@ -59,10 +52,10 @@ namespace Web.APIs.Controllers
         public async Task<IActionResult> GetAllFavorites()
 
         {
-            var UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;         
+            var UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
 
             var favorits = await _dbContext.Favorites.Where(f => f.UserId == UserId).ToListAsync();
-            
+
             var response = new List<FavoriteDto>();
             foreach (var i in favorits)
             {
@@ -73,18 +66,18 @@ namespace Web.APIs.Controllers
                     {
                         Id = i.ProductId,
                         title = product.title,
-                        basePrice = product.basePrice,
+                        basePrice = product.basePrice - (product.isOffred ? product.discountedPrice : 0),
                         pictureUrl = product.pictureUrl,
-                        colors=product.colors,
-                        sizes=product.sizes
+                        colors = product.colors,
+                        sizes = product.sizes
                     };
                     response.Add(dto);
                 }
             }
-           
+
 
             return Ok(response);
         }
 
-        }
+    }
 }
