@@ -122,7 +122,7 @@ namespace Web.Infrastructure.Service
                 return await BaseResponse.Fail(errors, "UnExpected error!", HttpStatusCode.InternalServerError);
             }
             var Token = await _authService.CreateTokenAsync(newUser, _userManager);
-            return await BaseResponse.Success(new { Token, userid = newUser.Id, newUser.ProfilePicture }, "Your account created successfully!");
+            return await BaseResponse.Success(new { Token, userId = newUser.Id, newUser.ProfilePicture }, "Your account created successfully!");
         }
 
         public async Task<BaseResponse> LoginAsync(LoginDTO loginDto)
@@ -179,7 +179,7 @@ namespace Web.Infrastructure.Service
             await _emailService.SendEmailAsync(request.Email, "Fashion Ecommerce", $"OTP: {otp}");
             var Token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            return await BaseResponse.Success(new { Token, userid = user.Id }, "Check your email!");
+            return await BaseResponse.Success(new { Token, userId = user.Id }, "Check your email!");
         }
 
         public async Task<BaseResponse> ResetPasswordAsync(ResetPasswordDto resetPassword)
