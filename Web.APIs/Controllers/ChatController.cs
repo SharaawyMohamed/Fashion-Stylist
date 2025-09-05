@@ -172,28 +172,28 @@ namespace Web.APIs.Controllers
                 .Distinct()
                 .ToList();
 
-            var users = await _context.Users
-                .Where(u => userIds.Contains(u.Id))
-                .ToDictionaryAsync(u => u.Id);
+
 
             var results = new List<ChatDto>();
 
             foreach (var chat in chats)
             {
+                if (chat.Messages.Count == 0) continue;
                 var LastMessage = chat.Messages
                     .OrderByDescending(m => m.CreatedAt)
                     .FirstOrDefault();
-
                 var otherUserId = chat.FirstUserId == userId ? chat.SecondUserId : chat.FirstUserId;
-                var user = users[otherUserId];
+                var user = await _context.Users.FirstOrDefaultAsync(U => U.Id == otherUserId);
+
+                if (user is null) continue;
 
                 var unreadCount = chat.Messages.Count(m => m.IsRead == false && m.ReceiverUserId == userId);
 
                 var chatDto = new ChatDto
                 {
                     ChatId = chat.id,
-                    SenderId = user.Id,
-                    UserName = user.UserName!,
+                    SenderId = user.Id ?? "",
+                    UserName = user.UserName ?? "NA",
 
                     UnReaded = unreadCount,
                     LastMessage = LastMessage?.Content,
@@ -201,8 +201,9 @@ namespace Web.APIs.Controllers
                 };
 
                 results.Add(chatDto);
-            }
 
+            }
+            results.OrderByDescending(R => R.Date);
             return Ok(results);
         }
         [HttpPut("MakeAllMassageRead")]
